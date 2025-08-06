@@ -6,9 +6,6 @@ import './index.css'
 import Header from './Components/Header/HeaderComponent'
 import ProjectSection from './Pages/ProjectSection'
 
-//DEV
-import Badges from './Components/Badges';
-
 export default class App extends Component {
 
   render() {
