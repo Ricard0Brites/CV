@@ -1,64 +1,83 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from './Components/Header/HeaderComponent'
-import About from './Components/AboutSection/AboutComponent'
-import ImageCard from './Components/ImageCard/ImageCardComponent'
-
-import HobbiesImage from './assets/Garage.avif'
-import WorkExperienceImage from './assets/PersonGaming3.avif'
-import EducationImage from './assets/Auditorium.avif'
-import ShowcaseImage from './assets/macbook2.avif'
-
-import AboutMePage from './Pages/AboutMe'
-import EducationPage from './Pages/Education'
-import PersonalInformationPage from './Pages/PersonalInformation'
-import ProfessionalExperiencePage from './Pages/ProfessionalExperience'
-import ShowcasePage from './Pages/Showcase'
-
 import './index.css'
 
+import Header from './Components/Header/HeaderComponent'
+import ProjectSection from './Pages/ProjectSection'
+
+//DEV
+import Badges from './Components/Badges';
+
 export default class App extends Component {
-  
-  GetRoutings()
-  {
+
+  render() {
     return (
-      <Routes>
-        <Route path="/" element={this.GetFrontEnd()}/>
-        <Route path="/About" element={<AboutMePage/>}/>
-        <Route path="/PersonalInformation" element={<PersonalInformationPage/>}/>
-        <Route path="/Education" element={<EducationPage/>}/>
-        <Route path="/ProfessionalExperience" element={<ProfessionalExperiencePage/>}/>
-        <Route path="/Showcase" element={<ShowcasePage/>}/>
-      </Routes>
+      <Router>
+        {this.GetRoutings()}
+      </Router>
     );
   }
 
-  GetFrontEnd()
-  {
+  GetRoutings() {
     return (
-      <div className="snap-y snap-mandatory overflow-y-scroll scroll-smooth h-screen">
-        <div className="flex flex-col h-screen w-screen snap-start">
-          <Header />
-          <About />
-        </div>
+      <div>
+      <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>  
+      </header>
+      <Routes>
+        <Route path="/" element={this.GetFrontEnd()} />
+        <Route path="Development/" element={this.GetDevelopment()} />
+      </Routes>
 
-        <section className="snap-start h-screen w-screen">
-          <div className="flex flex-row overflow-x-clip overflow-y-clip h-full w-full">
-            <ImageCard imageSrc={WorkExperienceImage} title="Professional Experience" Link="/ProfessionalExperience" />
-            <ImageCard imageSrc={EducationImage} title="Education" Link="/Education" />
-            <ImageCard imageSrc={ShowcaseImage} title="Showcase" Link="/Showcase" />
-            <ImageCard imageSrc={HobbiesImage} title="Personal & Hobbies" Link="/PersonalInformation" />
-          </div>
-        </section>
       </div>
-  );}
+    );
+  }
 
-  render() {
-    return(
-          <Router>
-            {this.GetRoutings()}
-          </Router>
-    ); 
+  #ProjectEntryObject(Image, Title, Description, Link) {
+    return { Image: [Image], Title: [Title], Description: [Description], Link: [Link] };
+  }
+
+  GetFrontEnd() {
+    return (
+      <div>
+        <Header />
+        <div className='
+        2xl:pl-40
+        2xl:pr-40
+        lg:pl-20 
+        lg:pr-20 
+        md:pl-20
+        md:pr-20
+        sm:pl-10
+        sm:pr-10
+        pl-5'>
+          <ProjectSection Title="Projects"  Objects={
+            [
+              this.#ProjectEntryObject(
+                "src/assets/GameEngineProjectCover.png",
+                "Game Engine",
+                `
+                Custom lightweight 2D focused C++ Game Engine based on OpenGL
+                <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
+                <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in test environments.
+                <br></br>Focused on modularity and maintainability for scalability.
+                `,
+                "https://github.com/Ricard0Brites/Game-Engine/tree/main")
+            ]} />
+        </div>
+      </div>
+    );
+  }
+
+  GetDevelopment() {
+    return (
+      <div className='w-full'>
+        <Header />
+        <div className='pl-40 pr-40'>
+          {Badges.htmlBadge()}
+        </div>
+      </div>
+    );
   }
 }
