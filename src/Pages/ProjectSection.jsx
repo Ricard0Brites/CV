@@ -21,8 +21,8 @@ export default function ProjectSection({ Title, Objects = [] }) {
     let textElement = 
     (
       <div className={`pl-4 flex flex-col max-h-100 `}>
-          <p className="dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-words"> {Title}</p>
-          <p className="dark:text-zinc-400 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-3.7 overflow-scroll break-all" dangerouslySetInnerHTML={{ __html: Description }}></p>
+          <p className="dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all pb-2"> {Title}</p>
+          <p className="dark:text-zinc-400 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-4 overflow-scroll break-after-all" dangerouslySetInnerHTML={{ __html: Description }}></p>
           <button
             className="
             flex 
@@ -46,7 +46,7 @@ export default function ProjectSection({ Title, Objects = [] }) {
     );
 
     return (
-      <div key={`${SectionCounter++}`} className={`flex ${isLeft ? "flex-row-reverse pl-4" : ""} justify-end`}>
+      <div key={`ProjectSectionKey_${SectionCounter++}`} className={`flex ${isLeft ? "flex-row-reverse pl-4" : ""} justify-end`}>
         <div className={`pr-4 pl-4 overflow-hidden`}>
           {textElement}
         </div>
