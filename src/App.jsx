@@ -4,12 +4,46 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css'
 
 import Header from './Components/Header/HeaderComponent'
-import ProjectSection from './Pages/ProjectSection'
-import ExperienceSection from './Pages/ExperienceSection'
+import ProjectSection from './Components/ProjectSection'
+import ExperienceSection from './Components/ExperienceSection'
+import SkillsSection from './Components/SkillsSection';
+
+const SkillsList = 
+[
+    {slug: "Unrealengine", rating:5},
+    {slug: "Cplusplus", rating:5},
+    {slug: "Csharp", rating:4},
+    {slug: "C", rating:5},
+    {slug: "Python", rating:3},
+    {slug: "Sql", rating:2},
+    {slug: "Unity", rating:3},
+    {slug: "Jira", rating:4},
+    {slug: "Confluence", rating:4},
+    {slug: "Git", rating:3},
+    {slug: "Github", rating:3},
+    {slug: "Perforce", rating:4},
+    {slug: "Helix", rating:4},
+    {slug: "Playfab", rating:3},
+    {slug: "Html5", rating:3},
+    {slug: "Css", rating:3},
+    {slug: "Tailwindcss", rating:3},
+    {slug: "Javascript", rating:4},
+    {slug: "Typescript", rating:3},
+    {slug: "React", rating:3},
+    {slug: "Nodedotjs", rating:3},
+    {slug: "Django", rating:3},
+    {slug: "Googledrive", rating:3},
+    {slug: "Googleauthenticator", rating:3},
+    {slug: "Notion", rating:4},
+    {slug: "Linux", rating:4},
+    {slug: "Visualstudio", rating:4},
+    {slug: "Visualstudiocode", rating:3},
+    {slug: "Pycharm", rating:3},
+];
 
 
-export default class App extends Component {
-
+export default class App extends Component 
+{
   render() {
     return (
       <Router>
@@ -32,7 +66,6 @@ export default class App extends Component {
       </div>
     );
   }
-
 
   /**
    * 
@@ -66,6 +99,7 @@ export default class App extends Component {
     };
   }
 
+
   GetFrontEnd() {
     return (
       <div>
@@ -80,8 +114,6 @@ export default class App extends Component {
         sm:pl-10
         sm:pr-10
         pl-5'>
-
-          
 
           <ExperienceSection Title={"Experience"} Objects=
           {
@@ -103,6 +135,12 @@ export default class App extends Component {
               this.#ExperienceEntryObject("Dominguos Sequeira High School", "Computer Systems Management and Programming", "Leiria - Portugal", "2016-2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
             ]
           } />
+
+
+          <SkillsSection 
+            Title={"Skills"} 
+            Data = {SkillsList} 
+          />
 
           <ExperienceSection Title={"Languages"} Objects=
           {

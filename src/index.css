@@ -31,3 +31,8 @@ hr {
 ::-webkit-scrollbar{
     display: none;
 }
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
