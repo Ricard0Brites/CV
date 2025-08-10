@@ -7,6 +7,7 @@ import Header from './Components/Header/HeaderComponent'
 import ProjectSection from './Components/ProjectSection'
 import ExperienceSection from './Components/ExperienceSection'
 import SkillsSection from './Components/SkillsSection';
+import RelocationSection from './Pages/RelocationSection';
 
 const SkillsList = 
 [
@@ -14,31 +15,34 @@ const SkillsList =
     {slug: "Cplusplus", rating:5},
     {slug: "Csharp", rating:4},
     {slug: "C", rating:5},
+    {slug: "Opengl", rating:3},
     {slug: "Python", rating:3},
-    {slug: "Sql", rating:2},
+    {slug: "azuresqldatabase", rating:3},
     {slug: "Unity", rating:3},
     {slug: "Jira", rating:4},
     {slug: "Confluence", rating:4},
+    {slug: "Figma", rating:3},
     {slug: "Git", rating:3},
     {slug: "Github", rating:3},
     {slug: "Perforce", rating:4},
-    {slug: "Helix", rating:4},
-    {slug: "Playfab", rating:3},
-    {slug: "Html5", rating:3},
-    {slug: "Css", rating:3},
-    {slug: "Tailwindcss", rating:3},
+    //{slug: "Helix", rating:4},
+    //{slug: "Html5", rating:3},
+    //{slug: "Css", rating:3},
+    //{slug: "Tailwindcss", rating:3},
     {slug: "Javascript", rating:4},
     {slug: "Typescript", rating:3},
-    {slug: "React", rating:3},
-    {slug: "Nodedotjs", rating:3},
-    {slug: "Django", rating:3},
-    {slug: "Googledrive", rating:3},
-    {slug: "Googleauthenticator", rating:3},
-    {slug: "Notion", rating:4},
-    {slug: "Linux", rating:4},
+   //{slug: "React", rating:3},
+   // {slug: "Nodedotjs", rating:3},
+   // {slug: "Django", rating:3},
+   // {slug: "Googledrive", rating:3},
+    //{slug: "Googleauthenticator", rating:3},
+   //{slug: "Notion", rating:4},
+    {slug: "Linux", rating:5},
+    {slug: "Windows11", rating:5},
     {slug: "Visualstudio", rating:4},
-    {slug: "Visualstudiocode", rating:3},
-    {slug: "Pycharm", rating:3},
+    //{slug: "Vscode", rating:3},
+    //{slug: "Pycharm", rating:3},
+    //{slug: "Ssh", rating:4},
 ];
 
 
@@ -136,19 +140,28 @@ export default class App extends Component
             ]
           } />
 
+          <RelocationSection Title={'Relocation & Work Authorization'}/>
+
+          
+          <div className='print-only'>
+          <br />
+          <br />
+          <br />
+          <br />
+          </div>
+
+          <ExperienceSection Title={"Communication"} Objects=
+          {
+            [ 
+              this.#ExperienceEntryObject("Portuguese", "Native", "", "", ""),
+              this.#ExperienceEntryObject("English", "Fluent", "CEFR C2", "", ""),
+            ]
+          } />
 
           <SkillsSection 
             Title={"Skills"} 
             Data = {SkillsList} 
           />
-
-          <ExperienceSection Title={"Languages"} Objects=
-          {
-            [ 
-              this.#ExperienceEntryObject("Portuguese", "Fluent", "", "", ""),
-              this.#ExperienceEntryObject("English", "Fluent", "", "", ""),
-            ]
-          } />
 
           <ProjectSection Title="Projects"  Objects=
           {

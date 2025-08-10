@@ -35,4 +35,20 @@ hr {
   .no-print {
     display: none !important;
   }
+  .print-only{
+    display: contents !important;
+  }
+}
+
+.print-only{
+    display: none;
+  }
+
+.link{
+  text-decoration: underline;
+}
+.link:hover
+{
+  @apply dark:text-zinc-400 text-zinc-500;
+  font-weight: 600;
 }
