@@ -14,8 +14,8 @@ const SkillsList =
     {slug: "Unrealengine", rating:5},
     {slug: "Cplusplus", rating:5},
     {slug: "Csharp", rating:4},
-    {slug: "C", rating:5},
-    {slug: "Opengl", rating:3},
+    {slug: "Dotnet", rating:4},
+    {slug: "Opengl", rating:2},
     {slug: "Python", rating:3},
     {slug: "azuresqldatabase", rating:3},
     {slug: "Unity", rating:3},
@@ -25,15 +25,15 @@ const SkillsList =
     {slug: "Git", rating:3},
     {slug: "Github", rating:3},
     {slug: "Perforce", rating:4},
-    //{slug: "Helix", rating:4},
+    {slug: "Helix", rating:4},
     //{slug: "Html5", rating:3},
     //{slug: "Css", rating:3},
     //{slug: "Tailwindcss", rating:3},
     {slug: "Javascript", rating:4},
     {slug: "Typescript", rating:3},
-   //{slug: "React", rating:3},
-   // {slug: "Nodedotjs", rating:3},
-   // {slug: "Django", rating:3},
+    {slug: "React", rating:3},
+    {slug: "Nodedotjs", rating:3},
+    // {slug: "Django", rating:3},
    // {slug: "Googledrive", rating:3},
     //{slug: "Googleauthenticator", rating:3},
    //{slug: "Notion", rating:4},
@@ -166,6 +166,26 @@ export default class App extends Component
           <ProjectSection Title="Projects"  Objects=
           {
             [
+              this.#ProjectEntryObject(
+                "src/assets/GameEngineProjectCover.png",
+                "C++ Game Engine",
+                `
+                Custom lightweight 2D focused C++ Game Engine based on OpenGL
+                <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
+                <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in test environments.
+                <br></br>Focused on modularity and maintainability for scalability.
+                `,
+                "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
+                this.#ProjectEntryObject(
+                "src/assets/GameEngineProjectCover.png",
+                "C++ Game Engine",
+                `
+                Custom lightweight 2D focused C++ Game Engine based on OpenGL
+                <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
+                <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in test environments.
+                <br></br>Focused on modularity and maintainability for scalability.
+                `,
+                "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
               this.#ProjectEntryObject(
                 "src/assets/GameEngineProjectCover.png",
                 "C++ Game Engine",

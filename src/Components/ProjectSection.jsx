@@ -46,12 +46,14 @@ export default function ProjectSection({ Title, Objects = [] }) {
     );
 
     return (
-      <div key={`ProjectSectionKey_${SectionCounter++}`} className={`flex ${isLeft ? "flex-row-reverse pl-4" : ""} justify-end`}>
-        <div className={`pr-4 pl-4 overflow-hidden`}>
-          {textElement}
-        </div>
-        <div className="flex items-center">
-          {imageElement}
+      <div key={`ProjectSectionKey_${SectionCounter++}`} className="flex justify-items-start">
+        <div className={`flex pt-10 ${isLeft ? "flex-row-reverse pl-4" : ""} justify-evenly`}>
+          <div className={`pr-4 pl-4 overflow-hidden`}>
+            {textElement}
+          </div>
+          <div className="flex items-center">
+            {imageElement}
+          </div>
         </div>
       </div>
 
@@ -73,7 +75,7 @@ export default function ProjectSection({ Title, Objects = [] }) {
           //#region Image Object
           if (Objects.length > 0) {
             return (
-              <div className={`flex flex-col justify-end max-w-screen`}>
+              <div>
                   {Content}
               </div>
             );
