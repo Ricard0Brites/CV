@@ -48,30 +48,68 @@ export default class SkillsSection extends Component
             console.log(Error);
         }
     }
-    #MakeEntry(Slug, Rating, Key) 
+    #MakeEntry(Slug, Rating, DisplayText, Key) 
     {
         let SVG = this.#TryGetSimpleIcon(Slug);
 
         return (
-            <div key={'Skill_' + Key} className="group inline-flex flex-col items-center relative w-[75px]">
-                {/* Icon */}
-                <div
-                    key={`Skill_${Key}`}
-                    className="dark:text-zinc-200 dark:fill-zinc-200 text-zinc-600 fill-zinc-600  h-[75px] w-[75px] m-4 transition-transform duration-300 ease-in-out group-hover:scale-75"
-                >
-                    {typeof SVG === 'string' ? (<div dangerouslySetInnerHTML={{ __html: SVG }} />) :(<div className='h-full w-full'><i title={Slug} className={`text-7xl devicon-${Slug.toLowerCase()}-plain`} /></div>)}
-                </div>
+        <div
+            key={"Skill_" + Key}
+            className="group inline-flex flex-col items-center relative w-[75px]"
+        >
+            {/* Icon wrapper */}
+            <div className="relative h-[75px] w-[75px] m-4">
+            {/* Background text (slug) */}
+            <span
+                className="
+                absolute inset-0 flex items-center justify-center
+                text-zinc-500 dark:text-zinc-400
+                font-semibold text-sm
+                opacity-0 group-hover:opacity-100 
+                transition-opacity duration-300
+                "
+            >
+                {DisplayText}
+            </span>
 
-                {/* Dots container */}
-                <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                        <div
-                            key={i}
-                            className={`h-2 w-2 rounded-full ${i < Rating ? 'bg-zinc-600 dark:bg-white' : 'bg-gray-300 dark:bg-zinc-600'}`}
-                        />
-                    ))}
+            {/* Icon */}
+            <div
+                key={`Skill_${Key}`}
+                className="
+                dark:text-zinc-200 dark:fill-zinc-200 
+                text-zinc-600 fill-zinc-600 
+                h-full w-full 
+                transition-transform duration-300 ease-in-out 
+                group-hover:scale-75 group-hover:opacity-0
+                "
+            >
+                {typeof SVG === "string" ? (
+                <div dangerouslySetInnerHTML={{ __html: SVG }} />
+                ) : (
+                <div className="h-full w-full flex items-center justify-center">
+                    <i
+                    title={DisplayText}
+                    className={`text-7xl devicon-${Slug.toLowerCase()}-plain`}
+                    />
                 </div>
+                )}
             </div>
+            </div>
+
+            {/* Dots container */}
+            <div className="flex space-x-1">
+            {[...Array(5)].map((_, i) => (
+                <div
+                key={i}
+                className={`h-2 w-2 rounded-full ${
+                    i < Rating
+                    ? "bg-zinc-600 dark:bg-white"
+                    : "bg-gray-300 dark:bg-zinc-600"
+                }`}
+                />
+            ))}
+            </div>
+        </div>
         );
     }
     
@@ -81,7 +119,7 @@ export default class SkillsSection extends Component
         let counter = 0;
         for(let entry of this.#Skills)
         {
-            content.push(this.#MakeEntry(entry.slug, entry.rating, counter++));
+            content.push(this.#MakeEntry(entry.slug, entry.rating, entry.DisplayText, counter++));
         }
         return content;
     }

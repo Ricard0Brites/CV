@@ -1,7 +1,7 @@
 var SectionCounter = 0;
 
 export default function ProjectSection({ Title, Objects = [] }) {
-  let isLeft = true;
+  let isLeft = false;
 
 
   function MakeEntry(Image, Title, Description, Link) 
@@ -20,10 +20,14 @@ export default function ProjectSection({ Title, Objects = [] }) {
 
     let textElement = 
     (
-      <div className={`pl-4 flex flex-col max-h-100 `}>
-          <p className="dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all pb-2"> {Title}</p>
-          <p className="dark:text-zinc-400 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-4 overflow-scroll break-after-all" dangerouslySetInnerHTML={{ __html: Description }}></p>
-          <button
+      <div className={`overflow-hidden flex flex-col max-h-100 pl-4`}>
+          <div className={`flex ${isLeft ? "justify-end" : ""}`}>
+            <p className={`dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all pb-2`}> {Title}</p>
+          </div>
+          <p className={`dark:text-zinc-400 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-4 overflow-scroll ${isLeft ? "text-right" : ""} break-after-all`} dangerouslySetInnerHTML={{ __html: Description }}></p>
+          
+          <div className={`flex ${isLeft ? "justify-end" : ""}`}>
+            <button
             className="
             flex 
             min-w-[120px]
@@ -42,18 +46,16 @@ export default function ProjectSection({ Title, Objects = [] }) {
           >
            View Project
           </button>
+          </div>
       </div>
     );
 
     return (
-      <div key={`ProjectSectionKey_${SectionCounter++}`} className="flex justify-items-start">
-        <div className={`flex pt-10 ${isLeft ? "flex-row-reverse pl-4" : ""} justify-evenly`}>
-          <div className={`pr-4 pl-4 overflow-hidden`}>
-            {textElement}
-          </div>
-          <div className="flex items-center">
+      <div key={`ProjectSectionKey_${SectionCounter++}`} className="flex pl-4 pr-4">
+        <div className={`flex pt-10 ${isLeft ? "flex-row-reverse" : ""}`}>
             {imageElement}
-          </div>
+            <div className="pl-4"></div>
+            {textElement}
         </div>
       </div>
 
@@ -63,7 +65,7 @@ export default function ProjectSection({ Title, Objects = [] }) {
   let Content = [];
   for (let entryData of Objects) {
     Content.push(MakeEntry(entryData.Image, entryData.Title, entryData.Description, entryData.Link));
-    isLeft = !isLeft;
+    //isLeft = !isLeft;
   }
 
   return (
