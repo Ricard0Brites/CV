@@ -25,10 +25,10 @@ export default function AboutMeSection({ Title, Name, PhotoPath, Description })
              max-w-9/12
              max-h-150
             ">
-                <div className="text-xl font-bold ">
+                <div className="text-xl dark:text-zinc-200 text-zinc-600">
                     {Name}
                 </div>
-                <div className="ml-4 mt-4">
+                <div className="ml-4 mt-4  text-zinc-500 dark:text-zinc-400">
                     {Description}
                 </div>
             </div>
