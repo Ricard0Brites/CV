@@ -10,6 +10,11 @@ import SkillsSection from './Components/SkillsSection';
 import RelocationSection from './Pages/RelocationSection';
 import AboutMeSection from './Components/MeSection';
 
+import Photo from '/src/assets/RicardoBritesPhoto.png';
+import GameEngineCover from '/src/assets/GameEngineProjectCover.png';
+import CVCover from '/src/assets/CVWebsiteProjectCover.png';
+import JSONEditorCover from '/src/assets/JSONEditorProjectCover.png';
+
 const SkillsList = 
 [
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
@@ -73,7 +78,7 @@ export default class App extends Component
 
   /**
    * 
-   * @param { string }Image - Path To Image
+   * @param { object }Image - Image Object
    * @param { string } Title -Title of the Project 
    * @param { string } Description - Description of the project
    * @param { string } Link - Link for the project (can be another page, can be a link to gihub, etc...)
@@ -123,7 +128,7 @@ export default class App extends Component
             <AboutMeSection 
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
-              PhotoPath={'src\\assets\\RicardoBritesPhoto.png'}
+              PhotoObj={Photo}
               Description={'Adaptable C++ developer focused on clean, maintainable systems. Comfortable working in teams and able to guide or mentor when needed. Passionate about learning, problem-solving, and contributing to meaningful game experiences.'}
             />
           </div>
@@ -177,7 +182,7 @@ export default class App extends Component
             {
               [
                 this.#ProjectEntryObject(
-                  "src/assets/GameEngineProjectCover.png",
+                  GameEngineCover,
                   "C++ Game Engine",
                   `
                   Custom lightweight 2D focused C++ Game Engine based on OpenGL
@@ -187,7 +192,7 @@ export default class App extends Component
                   `,
                   "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
                   this.#ProjectEntryObject(
-                  "src/assets/CVWebsiteProjectCover.png",
+                  CVCover,
                   "Curriculum Website",
                   `
                     <br></br>Developed a responsive single-page portfolio showcasing projects, skills, and experience.
@@ -195,7 +200,7 @@ export default class App extends Component
                   `,
                   "https://github.com/Ricard0Brites/cv-website/tree/one-pager"),
                 this.#ProjectEntryObject(
-                  "src/assets/JSONEditorProjectCover.png",
+                  JSONEditorCover,
                   "WPF JSON Editor (MVVM)",
                   `
                   JSON Editor application built with WPF in C# using the MVVM pattern.
