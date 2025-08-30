@@ -1,6 +1,6 @@
 {
-  "name": "cv-website",
-  "homepage": "https://ricard0brites.github.io/cv-website/",
+  "name": "CV",
+  "homepage": "https://ricard0brites.github.io/CV/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
