@@ -127,7 +127,7 @@ const SunIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0
         </a>
         <a
           onClick={()=>{window.open("mailto:ricardobrites.work@gmail.com");}}
-          className={`${PrimaryTextColor} hover:${PrimaryHoverColor} transition`}
+          className={`${PrimaryTextColor} hover:${PrimaryHoverColor} transition cursor-pointer`}
         >
           Email
         </a>
