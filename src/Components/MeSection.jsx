@@ -1,6 +1,6 @@
 var SectionCounter = 0;
 
-export default function AboutMeSection({ Title, Name, PhotoPath, Description }) 
+export default function AboutMeSection({ Title, Name, PhotoObj, Description }) 
 {
     
 
@@ -14,7 +14,7 @@ export default function AboutMeSection({ Title, Name, PhotoPath, Description })
             
             {/* Photo Column */}
             <div className="flex ml-4 w-[300px] min-w-1/10">
-                <img className="self-center rounded-xl" src={`${PhotoPath}`}></img>
+                <img className="self-center rounded-xl" src={PhotoObj}></img>
             </div>
 
             {/* Content Column */}
