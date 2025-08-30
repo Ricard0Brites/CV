@@ -127,7 +127,7 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com/in/RicardoBrites"
+          href="https://www.linkedin.com/in/ricard0brites/"
           target="_blank"
           rel="noopener noreferrer"
           className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 transition ease-in-out duration-300`}
