@@ -8,6 +8,7 @@ import ProjectSection from './Components/ProjectSection'
 import ExperienceSection from './Components/ExperienceSection'
 import SkillsSection from './Components/SkillsSection';
 import RelocationSection from './Pages/RelocationSection';
+import AboutMeSection from './Components/MeSection';
 
 const SkillsList = 
 [
@@ -119,6 +120,7 @@ export default class App extends Component
         sm:pr-10
         pl-5'>
 
+          <AboutMeSection Title={"About Me"} Name={'Ricardo Brites - 24'} PhotoPath={'src\\assets\\RicardoBritesPhoto.png'} Description={'Adaptable C++ developer focused on clean, maintainable systems. Passionate about learning, problem-solving, and contributing to meaningful game experiences.'}/>
           <ExperienceSection Title={"Experience"} Objects=
           {
             [ 
