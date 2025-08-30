@@ -45,10 +45,10 @@ export default class SkillsSection extends Component {
         let SVG = this.#TryGetSimpleIcon(Slug);
 
         return (
-            <>
+            <div key={"Skill_" + Key}>
                 {/* Screen version */}
                 <div
-                    key={"Skill_" + Key}
+                    
                     className="group inline-flex flex-col items-center relative w-[75px] no-print"
                 >
                     {/* Icon wrapper */}
@@ -127,7 +127,7 @@ export default class SkillsSection extends Component {
                         ))}
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 
