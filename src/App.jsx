@@ -124,7 +124,7 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoPath={'src\\assets\\RicardoBritesPhoto.png'}
-              Description={'Adaptable C++ developer focused on clean, maintainable systems. Passionate about learning, problem-solving, and contributing to meaningful game experiences.'}
+              Description={'Adaptable C++ developer focused on clean, maintainable systems. Comfortable working in teams and able to guide or mentor when needed. Passionate about learning, problem-solving, and contributing to meaningful game experiences.'}
             />
           </div>
 
