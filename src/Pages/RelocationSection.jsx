@@ -12,8 +12,8 @@ export default function RelocationSection({ Title, Text })
                   
                   <li className="dark:text-zinc-400 text-zinc-500">
                     &emsp;  Eligible for IEC Young Professionals and Working Holiday programs (no LMIA required).
-                    &emsp;<a className="link" href="https://ircc.canada.ca/english/work/iec/selections.asp?country=pt&cat=yp" target="_blank" rel="noopener noreferrer">Young Professionals Visa Pool</a>
-                    &emsp;<a className="link" href="https://ircc.canada.ca/english/work/iec/selections.asp?country=pt&cat=wh" target="_blank" rel="noopener noreferrer">Working Holiday Visa Pool</a>
+                    &emsp;<a className="link no-print" href="https://ircc.canada.ca/english/work/iec/selections.asp?country=pt&cat=yp" target="_blank" rel="noopener noreferrer">Young Professionals Visa Pool</a>
+                    &emsp;<a className="link no-print" href="https://ircc.canada.ca/english/work/iec/selections.asp?country=pt&cat=wh" target="_blank" rel="noopener noreferrer">Working Holiday Visa Pool</a>
                   </li>
                 </ul>
               </li>

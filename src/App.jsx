@@ -139,7 +139,7 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "2022-2025", 
                   `
-                    Led development of the user interface for the game Decimated.
+                    Led user interface development for the game Decimated.
                     Built and maintained backend systems, optimized existing codebases, conducted technical research, produced internal documentation,
                     debugged and resolved complex issues, and managed user account systems via PlayFab.
                   `),
