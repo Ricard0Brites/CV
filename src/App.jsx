@@ -130,7 +130,8 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoObj={Photo}
-              Description={'Adaptable C++ developer focused on clean, maintainable systems. Comfortable working in teams and able to guide or mentor when needed. Passionate about learning, problem-solving, and contributing to meaningful game experiences.'}
+              Description={`Generalist Unreal Engine Developer with 3+ years of professional experience and a published AAA Web3 game. Proficient in Gameplay Ability System, Gameplay Tags, 
+                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant game systems.`}
             />
           </div>
 
