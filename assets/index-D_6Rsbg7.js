@@ -110,7 +110,8 @@ Please change the parent <Route path="${K}"> to <Route path="${K==="/"?"*":`${K}
         md:pr-20\r
         sm:pl-10\r
         sm:pr-10\r
-        pl-5`,children:[Z.jsx("div",{className:"break-inside-avoid",children:Z.jsx(xs1,{Title:"About Me",Name:"Ricardo Brites - 24",PhotoObj:Hs1,Description:"Adaptable C++ developer focused on clean, maintainable systems. Comfortable working in teams and able to guide or mentor when needed. Passionate about learning, problem-solving, and contributing to meaningful game experiences."})}),Z.jsx("div",{className:"break-inside-avoid",children:Z.jsx(E8,{Title:"Experience",Objects:[X1(this,l0,Y2).call(this,"Fracture Labs","https://decimated.net/","Game Engineer","Remote","2022-2025",`
+        pl-5`,children:[Z.jsx("div",{className:"break-inside-avoid",children:Z.jsx(xs1,{Title:"About Me",Name:"Ricardo Brites - 24",PhotoObj:Hs1,Description:`Generalist Unreal Engine Developer with 3+ years of professional experience and a published AAA Web3 game. Proficient in Gameplay Ability System, Gameplay Tags, 
+                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant game systems.`})}),Z.jsx("div",{className:"break-inside-avoid",children:Z.jsx(E8,{Title:"Experience",Objects:[X1(this,l0,Y2).call(this,"Fracture Labs","https://decimated.net/","Game Engineer","Remote","2022-2025",`
                     Led UI development for the game Decimated, including design integration and system implementation.
                     Developed, maintained, and optimized multiple gameplay systems, improving performance, stability, and ease-of-use.
                     Performed technical research and created internal documentation to support ongoing development.
