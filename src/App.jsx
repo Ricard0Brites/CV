@@ -11,6 +11,7 @@ import RelocationSection from './Pages/RelocationSection';
 import AboutMeSection from './Components/MeSection';
 
 import Photo from '/src/assets/RicardoBritesPhoto.png';
+import UnrealBehaviorTreeImage from '/src/assets/UnrealBehaviorTree.png';
 import GameEngineCover from '/src/assets/GameEngineProjectCover.png';
 import CVCover from '/src/assets/CVWebsiteProjectCover.png';
 import JSONEditorCover from '/src/assets/JSONEditorProjectCover.png';
@@ -181,14 +182,20 @@ export default class App extends Component
             <ProjectSection Title="Projects"  Objects=
             {
               [
+                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "Replicated AI Pathing And Enemy Detection",
+                  `Built an AI system featuring replicated pathing, perception-based enemy detection, and state-driven behavior (patrolling, suspicious, and alert).
+                  <br></br>Developed using Unreal Engine's Behavior Trees with a custom C++ asynchronous task callable in blueprints running at adjustable intervals for optimized performance.
+                  <br></br>Implemented dynamic floating UI to display NPC awareness states in real time.
+                  <br></br>Integrated with Unreal's Game Animation Sample project, 
+                  combining C++ logic, Blueprints, and replicated behaviors for networked multiplayer scenarios.`,
+                  "https://github.com/Ricard0Brites/AI_Demo"),
                 this.#ProjectEntryObject(
                   GameEngineCover,
                   "C++ Game Engine",
                   `
-                  Custom lightweight 2D focused C++ Game Engine based on OpenGL
+                  Custom lightweight 2D focused C++ Game Engine using OpenGL
                   <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
-                  <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in test environments.
-                  <br></br>Focused on modularity and maintainability for scalability.
+                  <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in development environments.
                   `,
                   "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
                   this.#ProjectEntryObject(
