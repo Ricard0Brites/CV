@@ -69,7 +69,7 @@ export default class App extends Component
         <meta name="viewport" content="width=device-width, initial-scale=1"/>  
       </header>
       <Routes>
-        <Route path="/CV/" element={this.GetFrontEnd()} /> {/* change to 'cv-website/' when testing*/}
+        <Route path="/CV/" element={this.GetFrontEnd()} />
         <Route path="Development/" element={this.GetDevelopment()} />
       </Routes>
 

@@ -45,11 +45,11 @@ export default class SkillsSection extends Component {
         let SVG = this.#TryGetSimpleIcon(Slug);
 
         return (
-            <>
+            <div key={"Skill_" + Key} className="flex flex-col print:items-start print:justify-start items-center justify-center h-full">
                 {/* Screen version */}
                 <div
-                    key={"Skill_" + Key}
-                    className="group inline-flex flex-col items-center relative w-[75px] no-print"
+                    
+                    className="group inline-flex flex-col items-center relative w-[75px] m-2 no-print"
                 >
                     {/* Icon wrapper */}
                     <div className="relative h-[75px] w-[75px] m-4">
@@ -127,14 +127,15 @@ export default class SkillsSection extends Component {
                         ))}
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 
     #GetAllEntriesHTML() {
         let content = [];
         let counter = 0;
-        for (let entry of this.#Skills) {
+        for (let entry of this.#Skills) 
+            {
             content.push(this.#MakeEntry(entry.slug, entry.rating, entry.DisplayText, counter++));
         }
         return content;
@@ -149,7 +150,7 @@ export default class SkillsSection extends Component {
                 <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{this.props.Title}</h1>
                 <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
                 <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
-                    <div className='grid'
+                    <div className='grid '
                         style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
                     >
                         {
