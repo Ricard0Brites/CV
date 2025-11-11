@@ -140,11 +140,12 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "2022-2025", 
                   `
-                    Led user interface development for the game Decimated.
-                    Built and maintained backend systems, optimized existing codebases, conducted technical research, produced internal documentation,
-                    debugged and resolved complex issues, and managed user account systems via PlayFab.
+                    Led UI development for the game Decimated, including design integration and system implementation.
+                    Developed, maintained, and optimized multiple gameplay systems, improving performance, stability, and ease-of-use.
+                    Performed technical research and created internal documentation to support ongoing development.
+                    Managed user account systems and backend integration through PlayFab, including debugging, maintenance, and cloud-scripting.
                   `),
-                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "2019-2019", "Designed and developed a fully functional web application using Django.")
+                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "2019-2019", "Designed and developed a fully functional web store using Django.")
               ]
             }/>
           </div>
