@@ -39,16 +39,16 @@ const SkillsList =
     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
     {slug: "React", rating:3, DisplayText:"React"},
     {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
-    {slug: "Django", rating:3, DisplayText:"Django"},
-   // {slug: "Googledrive", rating:3},
-    //{slug: "Googleauthenticator", rating:3},
-   //{slug: "Notion", rating:4},
+    //  {slug: "Django", rating:3, DisplayText:"Django"},
+    // {slug: "Googledrive", rating:3},
+    // {slug: "Googleauthenticator", rating:3},
+    // {slug: "Notion", rating:4},
     {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
     {slug: "Windows11", rating:5, DisplayText:"Windows"},
     {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
     {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
-    //{slug: "Pycharm", rating:3},
-    //{slug: "Ssh", rating:4},
+    // {slug: "Pycharm", rating:3},
+    // {slug: "Ssh", rating:4},
 ];
 
 
