@@ -52,3 +52,8 @@ hr {
   @apply dark:text-zinc-400 text-zinc-500;
   font-weight: 600;
 }
+
+.bullet-li
+{
+  list-style-type: circle;
+}
