@@ -140,12 +140,28 @@ export default class App extends Component
             {
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "2022-2025", 
-                  `
-                    Led UI development for the game Decimated, including design integration and system implementation.
-                    Developed, maintained, and optimized multiple gameplay systems, improving performance, stability, and ease-of-use.
-                    Performed technical research and created internal documentation to support ongoing development.
-                    Managed user account systems and backend integration through PlayFab, including debugging, maintenance, and cloud-scripting.
-                  `),
+                  `<ul>
+                      <li class='bullet-li'>Implemented the player survival stat system (Water, Food, Blood, Health) with fully replicated logic and synchronized UI.</li>
+
+                      <li class='bullet-li'>Expanded the weapon system with new gameplay stats, UI-exposed data, interaction logic, and a modular sound-implementation pipeline supporting gunplay features and designer iteration.</li>
+
+                      <li class='bullet-li'>Built internal systems enabling the sound designer to integrate menu and UI SFX efficiently, accelerating iteration workflows.</li>
+
+                      <li class='bullet-li'>Optimized the vehicle and engine audio pipeline, eliminating idle-instance overflow and improving performance and clarity by ~850% through dynamic instance management.</li>
+
+                      <li class='bullet-li'>Created the complete circular gauge vehicle dashboard UI (Speed, Fuel, Nitro) using custom materials.</li>
+
+                      <li class='bullet-li'>Overhauled the entire input system, consolidating actions and integrating them into a scalable settings framework with clean rebinding support.</li>
+
+                      <li class='bullet-li'>Conducted technical research and produced internal documentation for the redesigned input system, improving onboarding and cross-team understanding.</li>
+
+                      <li class='bullet-li'>Designed and implemented the in-game map UI with dynamic player markers, objective indicators, and real-time updates driven by replicated game data.</li>
+
+                      <li class='bullet-li'>Developed PlayFab cloud scripts to reset and manage player stats across all accounts, improving debugging, QA workflows, and live-ops maintenance.</li>
+
+                      <li class='bullet-li'>Implemented features inside standalone Unreal Engine plugins, managing build.cs dependencies, avoiding forbidden references, and maintaining clean module separation.</li>
+                 
+                  </ul>`),
                 this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "2019-2019", "Designed and developed a fully functional web store using Django.")
               ]
             }/>
@@ -159,7 +175,8 @@ export default class App extends Component
               ]
             } />
           </div>
-          <div className='break-inside-avoid'>
+
+          <div className='break-inside-avoid no-print'>
             <RelocationSection Title={'Relocation & Work Authorization'}/>
           </div>
 
@@ -179,7 +196,11 @@ export default class App extends Component
               Data = {SkillsList} 
             />
           </div>
-          
+
+          <div className='break-inside-avoid print-only'>
+            <RelocationSection Title={'Relocation & Work Authorization'}/>
+          </div>
+
           <div className='break-inside-avoid'>
             <ProjectSection Title="Projects"  Objects=
             {

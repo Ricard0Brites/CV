@@ -1,11 +1,34 @@
+import { useState, useEffect, useRef } from 'react';
+
 var SectionCounter = 0;
 
-export default function ProjectSection({ Title, Objects = [] }) {
+export default function ProjectSection({ Title, Objects = [] }) 
+{
   let isLeft = false;
+  
+
+  function MakeEntry(Image, Title, Description, Link) {
+    let scrollRef = useRef(null);
+    let [showScrollBar, setShowScrollBar] = useState(false);
+
+    useEffect(() => {
+      const calculateScroll = () => {
+        const el = scrollRef.current;
+        if (!el) return;
+        setShowScrollBar(el.scrollHeight > el.clientHeight + 3);
+      };
+
+      // Initial check
+      calculateScroll();
+
+      // Listen to resize events
+      window.addEventListener('resize', calculateScroll);
+
+      // Cleanup listener on unmount
+      return () => window.removeEventListener('resize', calculateScroll);
+    }, []);
 
 
-  function MakeEntry(Image, Title, Description, Link) 
-  {
     let imageElement = 
     (
       <a onClick={()=>{open(Link)}} className="aspect-square">
@@ -20,12 +43,11 @@ export default function ProjectSection({ Title, Objects = [] }) {
 
     let textElement = 
     (
-      <div className={`overflow-hidden flex flex-col max-h-100 pl-4`}>
+      <div className={`overflow-hidden flex flex-col md:max-h-45 sm:max-h-35 flex-1 max-h-100 pl-4`}>
           <div className={`flex ${isLeft ? "justify-end" : ""}`}>
-            <p className={`dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all pb-2`}> {Title}</p>
+            <p className={`dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all mb-2`}> {Title}</p>
           </div>
-          <p className={`dark:text-zinc-400 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-4 overflow-scroll ${isLeft ? "text-right" : ""} break-after-all`} dangerouslySetInnerHTML={{ __html: Description }}></p>
-          
+            <p ref={scrollRef}className={`dark:text-zinc-400 pb-1 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-[1] overflow-scroll break-after-all ${isLeft ? "text-right" : ""} ${showScrollBar ? "default-scrollbar" : ""}`} dangerouslySetInnerHTML={{ __html: Description }}></p>
           <div className={`flex ${isLeft ? "justify-end" : ""}`}>
             <button
             className="
@@ -52,7 +74,7 @@ export default function ProjectSection({ Title, Objects = [] }) {
 
     return (
       <div key={`ProjectSectionKey_${SectionCounter++}`} className="flex pl-4 pr-4">
-        <div className={`flex pt-10 ${isLeft ? "flex-row-reverse" : ""}`}>
+        <div className={`flex pt-10 flex-1 ${isLeft ? "flex-row-reverse" : ""}`}>
             {imageElement}
             <div className="pl-4"></div>
             {textElement}
