@@ -57,3 +57,34 @@ hr {
 {
   list-style-type: circle;
 }
+
+
+
+.default-scrollbar {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* IE and old Edge */
+  scrollbar-width: thin; /* Firefox */
+  overflow-x: hidden;
+}
+
+.default-scrollbar {
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* IE and old Edge */
+  scrollbar-width: thin; /* Firefox */
+  overflow-x: hidden;
+  
+  /* Firefox: thumb color and track color */
+  scrollbar-color: rgba(100,100,100,0.5) rgba(200,200,200,0.0); /* thumb track */
+}
+
+/* WebKit browsers: Chrome, Safari, modern Edge */
+.default-scrollbar::-webkit-scrollbar {
+  width: 10px; /* vertical scrollbar width */
+}
+
+.default-scrollbar::-webkit-scrollbar-track {
+  background-color: rgba(200,200,200,0.0); /* track background color */
+}
+
+.default-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(100,100,100,0.0); /* thumb color */
+  border-radius: 5px;
+}
