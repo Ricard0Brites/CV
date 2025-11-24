@@ -15,6 +15,7 @@ import UnrealBehaviorTreeImage from '/src/assets/UnrealBehaviorTree.png';
 import GameEngineCover from '/src/assets/GameEngineProjectCover.png';
 import CVCover from '/src/assets/CVWebsiteProjectCover.png';
 import JSONEditorCover from '/src/assets/JSONEditorProjectCover.png';
+import Decimated from '/src/assets/Decimated.png';
 
 const SkillsList = 
 [
@@ -205,6 +206,17 @@ export default class App extends Component
             <ProjectSection Title="Projects"  Objects=
             {
               [
+                this.#ProjectEntryObject(Decimated, "Decimated",
+                  `
+                    Implemented core gameplay systems including the fully replicated player survival stats (Water, Food, Blood, Health) with synchronized UI.
+                    <br></br>Expanded the weapon framework with new gameplay attributes, designer-exposed data, improved interaction logic, and a modular audio pipeline for firearms.
+                    <br></br>Optimized vehicle and engine audio, reducing idle-instance overflow and improving runtime performance and clarity by ~850% through dynamic instance control.
+                    <br></br>Built the circular vehicle dashboard UI (speed, fuel, nitro) using custom materials and events.
+                    <br></br>Reworked the input system, centralizing actions and enabling clean, scalable key-rebinding support.
+                    <br></br>Developed the in-game map UI with dynamic player markers and replicated objective indicators.
+                    <br></br>Created PlayFab cloud scripts for account stat resets and maintenance workflows.
+                    <br></br>Modified multiple Unreal Engine plugin features while maintaining clean module separation and proper build.cs dependency hygiene.`,
+                  "https://store.epicgames.com/en-US/p/decimated-de8da4"),
                 this.#ProjectEntryObject(UnrealBehaviorTreeImage, "Replicated AI Pathing And Enemy Detection",
                   `Built an AI system featuring replicated pathing, perception-based enemy detection, and state-driven behavior (patrolling, suspicious, and alert).
                   <br></br>Developed using Unreal Engine's Behavior Trees with a custom C++ asynchronous task callable in blueprints running at adjustable intervals for optimized performance.
