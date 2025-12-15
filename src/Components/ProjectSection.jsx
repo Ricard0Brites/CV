@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 
 var SectionCounter = 0;
 
-export default function ProjectSection({ Title, Objects = [] }) 
+export default function ProjectSection({ Title, Objects = []}) 
 {
   let isLeft = false;
   
@@ -45,7 +45,7 @@ export default function ProjectSection({ Title, Objects = [] })
     (
       <div className={`overflow-hidden flex flex-col md:max-h-45 sm:max-h-35 flex-1 max-h-100 pl-4`}>
           <div className={`flex ${isLeft ? "justify-end" : ""}`}>
-            <p className={`dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all mb-2`}> {Title}</p>
+            <p id={`${Title}`} className={`dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal break-after-all mb-2`}> {Title}</p>
           </div>
             <p ref={scrollRef}className={`dark:text-zinc-400 pb-1 text-zinc-500 pl-4 pr-4 text-sm font-normal leading-[1] overflow-scroll break-after-all ${isLeft ? "text-right" : ""} ${showScrollBar ? "default-scrollbar" : ""}`} dangerouslySetInnerHTML={{ __html: Description }}></p>
           <div className={`flex ${isLeft ? "justify-end" : ""}`}>
@@ -92,7 +92,7 @@ export default function ProjectSection({ Title, Objects = [] })
 
   return (
     <div className="no-print">
-      <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{Title}</h1>
+      <h1 id={`${Title}`} className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{Title}</h1>
       <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
       {
         (() => {

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './index.css'
@@ -55,7 +55,28 @@ const SkillsList =
 
 export default class App extends Component 
 {
-  render() {
+  componentDidMount() {
+    this.scrollToHash();
+    window.addEventListener("hashchange", this.scrollToHash);
+  }
+
+  componentDidUpdate() {
+    this.scrollToHash();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("hashchange", this.scrollToHash);
+  }
+
+  scrollToHash = () => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+  render() 
+  {
     return (
       <Router>
         {this.GetRoutings()}
@@ -203,7 +224,7 @@ export default class App extends Component
           </div>
 
           <div className='break-inside-avoid'>
-            <ProjectSection Title="Projects"  Objects=
+            <ProjectSection Title="Projects" Objects=
             {
               [
                 this.#ProjectEntryObject(Decimated, "Decimated",
