@@ -55,25 +55,26 @@ const SkillsList =
 
 export default class App extends Component 
 {
-  componentDidMount() {
-    this.scrollToHash();
-    window.addEventListener("hashchange", this.scrollToHash);
-  }
-
-  componentDidUpdate() {
-    this.scrollToHash();
+   componentDidMount() {
+    this.scrollToHashWithRetry();
+    window.addEventListener("hashchange", this.scrollToHashWithRetry);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("hashchange", this.scrollToHash);
+    window.removeEventListener("hashchange", this.scrollToHashWithRetry);
   }
 
-  scrollToHash = () => {
+  scrollToHashWithRetry = () => {
     const id = window.location.hash.slice(1);
     if (!id) return;
 
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    const interval = setInterval(() => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        clearInterval(interval);
+      }
+    }, 50);
   };
   render() 
   {
