@@ -66,6 +66,10 @@ export default class App extends Component
 
   scrollToHashWithRetry = () => {
     const id = window.location.hash.slice(1);
+    console.log(window);
+    console.log(window.location);
+    console.log(window.location.hash);
+    console.log(`Attempting to scroll to: ${id}`);
     if (!id) return;
 
     const interval = setInterval(() => {
