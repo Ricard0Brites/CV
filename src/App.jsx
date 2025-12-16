@@ -64,22 +64,27 @@ export default class App extends Component
     window.removeEventListener("hashchange", this.scrollToHashWithRetry);
   }
 
-  scrollToHashWithRetry = () => {
-    const id = window.location.hash.slice(1);
-    console.log(window);
-    console.log(window.location);
-    console.log(window.location.hash);
-    console.log(`Attempting to scroll to: ${id}`);
-    if (!id) return;
+  scrollToHashWhenReady = () => {
+  const id = window.location.hash.slice(1);
+  if (!id) return;
 
-    const interval = setInterval(() => {
-      const el = document.getElementById(id);
-      if (el) {
+  const tryScroll = () => {
+    const el = document.getElementById(id);
+    if (!el) {
+      // Element not yet in DOM → try again soon
+      setTimeout(tryScroll, 50);
+      return;
+    }
+
+    // Wait for layout/paint before scrolling
+    requestAnimationFrame(() => {
+      // Optionally repeat once to ensure smooth scroll
+      requestAnimationFrame(() => {
         el.scrollIntoView({ behavior: "smooth" });
-        clearInterval(interval);
-      }
-    }, 50);
+      });
+    });
   };
+
   render() 
   {
     return (
