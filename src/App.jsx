@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './index.css'
@@ -55,43 +55,25 @@ const SkillsList =
 
 export default class App extends Component 
 {
-   componentDidMount() {
-    this.scrollToHashWhenReady();
-    window.addEventListener("hashchange", this.scrollToHashWhenReady);
+  
+  componentDidMount() 
+  {
+    const hash = window.location.hash;
+
+    // Handle HashRouter + anchor
+    const parts = hash.split("#");
+    if (parts.length <= 0) return;
+    const el = document.getElementById(decodeURIComponent(parts[1]));
+    if (el) 
+      el.scrollIntoView({ behavior: "smooth" });
   }
-
-  componentWillUnmount() {
-    window.removeEventListener("hashchange", this.scrollToHashWhenReady);
-  }
-
-  scrollToHashWhenReady = () => {
-  const id = window.location.hash.slice(1);
-  if (!id) return;
-
-  const tryScroll = () => {
-    const el = document.getElementById(id);
-    if (!el) {
-      // Element not yet in DOM → try again soon
-      setTimeout(tryScroll, 50);
-      return;
-    }
-
-    // Wait for layout/paint before scrolling
-    requestAnimationFrame(() => {
-      // Optionally repeat once to ensure smooth scroll
-      requestAnimationFrame(() => {
-        el.scrollIntoView({ behavior: "smooth" });
-      });
-    });
-  };
-    tryScroll();
-  };
-
   render() 
   {
+    console.log('Beginning Render');
     return (
       <Router>
         {this.GetRoutings()}
+        {console.log('Ending Render')}
       </Router>
     );
   }
