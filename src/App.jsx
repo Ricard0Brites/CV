@@ -56,12 +56,12 @@ const SkillsList =
 export default class App extends Component 
 {
    componentDidMount() {
-    this.scrollToHashWithRetry();
-    window.addEventListener("hashchange", this.scrollToHashWithRetry);
+    this.scrollToHashWhenReady();
+    window.addEventListener("hashchange", this.scrollToHashWhenReady);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("hashchange", this.scrollToHashWithRetry);
+    window.removeEventListener("hashchange", this.scrollToHashWhenReady);
   }
 
   scrollToHashWhenReady = () => {
