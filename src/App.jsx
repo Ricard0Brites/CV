@@ -84,6 +84,8 @@ export default class App extends Component
       });
     });
   };
+    tryScroll();
+  };
 
   render() 
   {
