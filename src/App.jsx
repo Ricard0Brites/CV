@@ -69,11 +69,9 @@ export default class App extends Component
   }
   render() 
   {
-    console.log('Beginning Render');
     return (
       <Router>
         {this.GetRoutings()}
-        {console.log('Ending Render')}
       </Router>
     );
   }
