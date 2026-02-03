@@ -38,7 +38,7 @@ export default class SkillsSection extends Component {
                 return Cache.svg;
         }
         catch (Error) {
-            console.log(Error);
+            //console.log(Error);
         }
     }
     #MakeEntry(Slug, Rating, DisplayText, Key) {
