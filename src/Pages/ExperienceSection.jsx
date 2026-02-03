@@ -36,7 +36,7 @@ export default function ExperienceSection({ Title, Objects = [] })
                 return (
                 <div className={`flex flex-col justify-end max-w-screen pl-4`}>
                     {content}
-                    {console.log(content)}
+                    {//console.log(content)}
                 </div>
                 );
           }

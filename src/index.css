@@ -36,7 +36,7 @@ hr {
     display: none !important;
   }
   .print-only{
-    display: contents !important;
+    display: flow-root !important;
   }
 }
 
