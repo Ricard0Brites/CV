@@ -4,26 +4,9 @@ export default function RelocationSection({ Title, Text })
     <div>
       <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{Title}</h1>
       <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
-       <div className="
-       2xl:pl-10
-       2xl:pr-10
-       lg:pl-5 
-       lg:pr-5 
-       md:pl-5
-       md:pr-5
-       sm:pl-2
-       sm:pr-2
-       pl-1" dangerouslySetInnerHTML={{__html: Text }}></div>
-       <ul  className="
-       2xl:pl-10
-       2xl:pr-10
-       lg:pl-5 
-       lg:pr-5 
-       md:pl-5
-       md:pr-5
-       sm:pl-2
-       sm:pr-2
-       pl-1">
+       <div dangerouslySetInnerHTML={{__html: Text }}></div>
+       
+       <ul className="pl-4">
               <li className="dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal">
                Canada <span className="text-zinc-500 dark:text-zinc-500 text-sm">(Visa Needed)</span>
                 <ul>
