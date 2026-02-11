@@ -23,31 +23,31 @@ const SkillsList =
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
     {slug: "Csharp", rating:4, DisplayText:"C#"},
     {slug: "Dotnet", rating:4, DisplayText:".NET"},
-    {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
+    //{slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Python", rating:3, DisplayText:"Python"},
     {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
-    {slug: "Unity", rating:3, DisplayText:"Unity"},
+    //{slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     {slug: "Figma", rating:3, DisplayText:"Figma"},
     {slug: "Git", rating:3, DisplayText:"Git"},
     {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:4, DisplayText:"Perforce"},
-    {slug: "Html5", rating:3, DisplayText:"HTML"},
-    {slug: "Css", rating:3, DisplayText:"CSS"},
+    //{slug: "Html5", rating:3, DisplayText:"HTML"},
+    //{slug: "Css", rating:3, DisplayText:"CSS"},
     //{slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    {slug: "React", rating:3, DisplayText:"React"},
-    {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    //{slug: "React", rating:3, DisplayText:"React"},
+    //{slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
     //  {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
     // {slug: "Notion", rating:4},
     {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
     {slug: "Windows11", rating:5, DisplayText:"Windows"},
-    {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
-    {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
+     {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
+    // {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
     // {slug: "Pycharm", rating:3},
     // {slug: "Ssh", rating:4},
 ];
@@ -220,23 +220,11 @@ export default class App extends Component
             {
               [
                 this.#ProjectEntryObject(Decimated, "Decimated",
-                  `
-                    Implemented core gameplay systems including the fully replicated player survival stats (Water, Food, Blood, Health) with synchronized UI.
-                    <br></br>Expanded the weapon framework with new gameplay attributes, designer-exposed data, improved interaction logic, and a modular audio pipeline for firearms.
-                    <br></br>Optimized vehicle and engine audio, reducing idle-instance overflow and improving runtime performance and clarity by ~850% through dynamic instance control.
-                    <br></br>Built the circular vehicle dashboard UI (speed, fuel, nitro) using custom materials and events.
-                    <br></br>Reworked the input system, centralizing actions and enabling clean, scalable key-rebinding support.
-                    <br></br>Developed the in-game map UI with dynamic player markers and replicated objective indicators.
-                    <br></br>Created PlayFab cloud scripts for account stat resets and maintenance workflows.
-                    <br></br>Modified multiple Unreal Engine plugin features while maintaining clean module separation and proper build.cs dependency hygiene.`,
+                  `Decimated (video game) Decimated is a multiplayer survival game set in a post-apocalyptic wasteland. Players choose roles such as civilians, traders, or law enforcers and compete for resources, territory, and reputation. Gameplay combines vehicle combat, shooting, looting, crafting, and faction-based interaction. It emphasizes player-driven economies, open-world exploration, and PvP/PvE encounters. The setting features ruined cities, deserts, and industrial zones, with progression tied to gear, alliances, and risk-reward decisions.`,
                   "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "Replicated AI Pathing And Enemy Detection",
-                  `Built an AI system featuring replicated pathing, perception-based enemy detection, and state-driven behavior (patrolling, suspicious, and alert).
-                  <br></br>Developed using Unreal Engine's Behavior Trees with a custom C++ asynchronous task callable in blueprints running at adjustable intervals for optimized performance.
-                  <br></br>Implemented dynamic floating UI to display NPC awareness states in real time.
-                  <br></br>Integrated with Unreal's Game Animation Sample project, 
-                  combining C++ logic, Blueprints, and replicated behaviors for networked multiplayer scenarios.`,
-                  "https://github.com/Ricard0Brites/AI_Demo"),
+                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "Unreal AI",
+                  `AI system in Unreal Engine using sight perception with states for patrol, suspicious, investigating, chasing, and combat. AI can detect players, switch between states, and take cover during combat or chase. The system uses behavior trees and blackboards to manage decision-making, enabling NPCs to respond to player actions and navigate the environment efficiently. Designed to be modular and functional for gameplay testing, focusing on realistic reactions without extensive optimization or additional mechanics.`,
+                  "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
                 this.#ProjectEntryObject(
                   GameEngineCover,
                   "C++ Game Engine",
@@ -245,24 +233,7 @@ export default class App extends Component
                   <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
                   <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in development environments.
                   `,
-                  "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
-                  this.#ProjectEntryObject(
-                  CVCover,
-                  "Curriculum Website",
-                  `
-                    <br></br>Developed a responsive single-page portfolio showcasing projects, skills, and experience.
-                    <br></br>Implemented React components styled with TailwindCSS.
-                  `,
-                  "https://github.com/Ricard0Brites/cv-website/tree/one-pager"),
-                this.#ProjectEntryObject(
-                  JSONEditorCover,
-                  "WPF JSON Editor (MVVM)",
-                  `
-                  JSON Editor application built with WPF in C# using the MVVM pattern.
-                  <br></br>Implements data binding, commands, and observable collections for responsive UI updates.
-                  <br></br>Supports creating, editing, and validating JSON structures with real-time feedback.
-                  `,
-                  "https://github.com/Ricard0Brites/JSON_Editor/tree/main")
+                  "https://github.com/Ricard0Brites/Game-Engine/tree/main")
               ]
             } />
           </div>
