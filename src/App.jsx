@@ -149,11 +149,29 @@ export default class App extends Component
             />
           </div>
 
+          <div className='print-only break-inside-avoid'>
+            <ExperienceSection Title={"Contact"} Objects=
+            {
+              [ 
+                this.#ExperienceEntryObject("Email", "", "ricardobrites.work@gmail.com", "", "", ""),
+                this.#ExperienceEntryObject("GitHub", "", "github.com/Ricard0Brites", "", "", ""),
+                this.#ExperienceEntryObject("LinkedIn", "", "linkedin.com/in/ricard0brites/", "", "", ""),
+              ]
+            } />
+          </div>
+          
+          <div className='break-inside-avoid'>
+            <SkillsSection 
+              Title={"Skills"} 
+              Data = {SkillsList} 
+            />
+          </div>
+
           <div className='break-inside-avoid'>
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "2022-2025", 
+                this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "09/2022 - 09/2025", 
                   `<ul>
                       <li class='bullet-li'>Implemented the player survival stat system (Water, Food, Blood, Health) with fully replicated logic and synchronized UI.</li>
 
@@ -176,7 +194,7 @@ export default class App extends Component
                       <li class='bullet-li'>Implemented features inside standalone Unreal Engine plugins, managing build.cs dependencies, avoiding forbidden references, and maintaining clean module separation.</li>
                  
                   </ul>`),
-                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "2019-2019", "Designed and developed a fully functional web store using Django.")
+                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "03/2019 - 07/2019", "Designed and developed a fully functional web store using Django.")
               ]
             }/>
           </div>
@@ -184,8 +202,8 @@ export default class App extends Component
             <ExperienceSection Title={"Education"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria - Portugal", "2020-2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
-                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria - Portugal", "2016-2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
+                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria - Portugal", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
+                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria - Portugal", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
               ]
             } />
           </div>
@@ -202,13 +220,6 @@ export default class App extends Component
                 this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
               ]
             } />
-          </div>
-          
-          <div className='break-inside-avoid'>
-            <SkillsSection 
-              Title={"Skills"} 
-              Data = {SkillsList} 
-            />
           </div>
 
           <div className='break-inside-avoid print-only'>
