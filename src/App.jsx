@@ -144,8 +144,8 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoObj={Photo}
-              Description={`Generalist Unreal Engine Developer with 3+ years of professional experience and a published AAA Web3 game. Proficient in Gameplay Ability System, Gameplay Tags, 
-                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant game systems.`}
+              Description={`Generalist Unreal Engine Developer with 3 years of professional experience in game development and a shipped AAA game. Proficient in Gameplay Ability System, Gameplay Tags, 
+                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant systems. Actively seeking relocation opportunities.`}
             />
           </div>
 
@@ -154,7 +154,7 @@ export default class App extends Component
             {
               [ 
                 this.#ExperienceEntryObject("Email", "", "ricardobrites.work@gmail.com", "", "", ""),
-                this.#ExperienceEntryObject("GitHub", "", "github.com/Ricard0Brites", "", "", ""),
+                this.#ExperienceEntryObject("GitHub", "", "github.com/ricard0brites", "", "", ""),
                 this.#ExperienceEntryObject("LinkedIn", "", "linkedin.com/in/ricard0brites/", "", "", ""),
               ]
             } />
@@ -171,7 +171,7 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "09/2022 - 09/2025", 
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer - Decimated", "Remote", "09/2022 - 09/2025", 
                   `<ul>
                       <li class='bullet-li'>Implemented the player survival stat system (Water, Food, Blood, Health) with fully replicated logic and synchronized UI.</li>
 
@@ -231,18 +231,43 @@ export default class App extends Component
             {
               [
                 this.#ProjectEntryObject(Decimated, "Decimated",
-                  `Decimated (video game) Decimated is a multiplayer survival game set in a post-apocalyptic wasteland. Players choose roles such as civilians, traders, or law enforcers and compete for resources, territory, and reputation. Gameplay combines vehicle combat, shooting, looting, crafting, and faction-based interaction. It emphasizes player-driven economies, open-world exploration, and PvP/PvE encounters. The setting features ruined cities, deserts, and industrial zones, with progression tied to gear, alliances, and risk-reward decisions.`,
+                  `
+                  --- Professionally Worked on as Gameplay Engineer ---
+<pre> 
+  - Multiplayer
+  - Massive Open World
+  - AAA
+  - Shipped (01/2025)
+</pre>`,
                   "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "Unreal AI",
-                  `AI system in Unreal Engine using sight perception with states for patrol, suspicious, investigating, chasing, and combat. AI can detect players, switch between states, and take cover during combat or chase. The system uses behavior trees and blackboards to manage decision-making, enabling NPCs to respond to player actions and navigate the environment efficiently. Designed to be modular and functional for gameplay testing, focusing on realistic reactions without extensive optimization or additional mechanics.`,
-                  "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
+                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI",
+                  ` --- Personal Project ---
+                  <br></br> AI system in Unreal Engine using perception with states. The Project demosntrates 
+<pre> 
+  - AI Pathing
+  - Enemy Detection (Vision, Sound, and Damage)
+  - Asynchronous Dynamic State Switching
+  - Interaction
+  - Weapon Mechanics 
+  - Animations
+  - Dynamic UI (Custom Shader)
+</pre>`,
+                "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
                 this.#ProjectEntryObject(
                   GameEngineCover,
                   "C++ Game Engine",
                   `
-                  Custom lightweight 2D focused C++ Game Engine using OpenGL
-                  <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
-                  <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in development environments.
+                  --- University Project ---
+                  <br></br>
+                  Custom lightweight C++ Game Engine made using OpenGL.
+                  <br></br>Built systems: 
+<pre> 
+  - Entity management
+  - Collision
+  - Render
+  - Event
+  - Input
+</pre>
                   `,
                   "https://github.com/Ricard0Brites/Game-Engine/tree/main")
               ]

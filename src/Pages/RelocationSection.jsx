@@ -8,13 +8,11 @@ export default function RelocationSection({ Title, Text })
        
        <ul className="pl-4">
               <li className="dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal">
-               Canada <span className="text-zinc-500 dark:text-zinc-500 text-sm">(Visa Needed)</span>
+               Canada <span className="text-zinc-500 dark:text-zinc-500 text-sm"></span>
                 <ul>
                   
                   <li className="dark:text-zinc-400 text-zinc-500">
-                    &emsp;  Eligible for IEC Young Professionals and Working Holiday programs (no LMIA required).
-                    &emsp;<a className="link no-print" href="https://ircc.canada.ca/english/work/iec/selections.asp?country=pt&cat=yp" target="_blank" rel="noopener noreferrer">Young Professionals Visa Pool</a>
-                    &emsp;<a className="link no-print" href="https://ircc.canada.ca/english/work/iec/selections.asp?country=pt&cat=wh" target="_blank" rel="noopener noreferrer">Working Holiday Visa Pool</a>
+                    Awaiting Visa Process Finalization
                   </li>
                 </ul>
               </li>
