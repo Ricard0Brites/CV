@@ -23,31 +23,31 @@ const SkillsList =
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
     {slug: "Csharp", rating:4, DisplayText:"C#"},
     {slug: "Dotnet", rating:4, DisplayText:".NET"},
-    {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
+    //{slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Python", rating:3, DisplayText:"Python"},
     {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
-    {slug: "Unity", rating:3, DisplayText:"Unity"},
+    //{slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     {slug: "Figma", rating:3, DisplayText:"Figma"},
     {slug: "Git", rating:3, DisplayText:"Git"},
     {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:4, DisplayText:"Perforce"},
-    {slug: "Html5", rating:3, DisplayText:"HTML"},
-    {slug: "Css", rating:3, DisplayText:"CSS"},
+    //{slug: "Html5", rating:3, DisplayText:"HTML"},
+    //{slug: "Css", rating:3, DisplayText:"CSS"},
     //{slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    {slug: "React", rating:3, DisplayText:"React"},
-    {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    //{slug: "React", rating:3, DisplayText:"React"},
+    //{slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
     //  {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
     // {slug: "Notion", rating:4},
     {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
     {slug: "Windows11", rating:5, DisplayText:"Windows"},
-    {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
-    {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
+     {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
+    // {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
     // {slug: "Pycharm", rating:3},
     // {slug: "Ssh", rating:4},
 ];
@@ -144,8 +144,26 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoObj={Photo}
-              Description={`Generalist Unreal Engine Developer with 3+ years of professional experience and a published AAA Web3 game. Proficient in Gameplay Ability System, Gameplay Tags, 
-                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant game systems.`}
+              Description={`Generalist Unreal Engine Developer with 3 years of professional experience in game development and a shipped AAA game. Proficient in Gameplay Ability System, Gameplay Tags, 
+                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant systems. Actively seeking relocation opportunities.`}
+            />
+          </div>
+
+          <div className='print-only break-inside-avoid'>
+            <ExperienceSection Title={"Contact"} Objects=
+            {
+              [ 
+                this.#ExperienceEntryObject("Email", "", "ricardobrites.work@gmail.com", "", "", ""),
+                this.#ExperienceEntryObject("GitHub", "", "github.com/ricard0brites", "", "", ""),
+                this.#ExperienceEntryObject("LinkedIn", "", "linkedin.com/in/ricard0brites/", "", "", ""),
+              ]
+            } />
+          </div>
+          
+          <div className='break-inside-avoid'>
+            <SkillsSection 
+              Title={"Skills"} 
+              Data = {SkillsList} 
             />
           </div>
 
@@ -153,7 +171,7 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://decimated.net/", "Game Engineer", "Remote", "2022-2025", 
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer - Decimated", "Remote", "09/2022 - 09/2025", 
                   `<ul>
                       <li class='bullet-li'>Implemented the player survival stat system (Water, Food, Blood, Health) with fully replicated logic and synchronized UI.</li>
 
@@ -176,7 +194,7 @@ export default class App extends Component
                       <li class='bullet-li'>Implemented features inside standalone Unreal Engine plugins, managing build.cs dependencies, avoiding forbidden references, and maintaining clean module separation.</li>
                  
                   </ul>`),
-                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "2019-2019", "Designed and developed a fully functional web store using Django.")
+                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "03/2019 - 07/2019", "Designed and developed a fully functional web store using Django.")
               ]
             }/>
           </div>
@@ -184,8 +202,8 @@ export default class App extends Component
             <ExperienceSection Title={"Education"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria - Portugal", "2020-2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
-                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria - Portugal", "2016-2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
+                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria - Portugal", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
+                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria - Portugal", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
               ]
             } />
           </div>
@@ -203,13 +221,6 @@ export default class App extends Component
               ]
             } />
           </div>
-          
-          <div className='break-inside-avoid'>
-            <SkillsSection 
-              Title={"Skills"} 
-              Data = {SkillsList} 
-            />
-          </div>
 
           <div className='break-inside-avoid print-only'>
             <RelocationSection Title={'Relocation & Work Authorization'}/>
@@ -221,48 +232,44 @@ export default class App extends Component
               [
                 this.#ProjectEntryObject(Decimated, "Decimated",
                   `
-                    Implemented core gameplay systems including the fully replicated player survival stats (Water, Food, Blood, Health) with synchronized UI.
-                    <br></br>Expanded the weapon framework with new gameplay attributes, designer-exposed data, improved interaction logic, and a modular audio pipeline for firearms.
-                    <br></br>Optimized vehicle and engine audio, reducing idle-instance overflow and improving runtime performance and clarity by ~850% through dynamic instance control.
-                    <br></br>Built the circular vehicle dashboard UI (speed, fuel, nitro) using custom materials and events.
-                    <br></br>Reworked the input system, centralizing actions and enabling clean, scalable key-rebinding support.
-                    <br></br>Developed the in-game map UI with dynamic player markers and replicated objective indicators.
-                    <br></br>Created PlayFab cloud scripts for account stat resets and maintenance workflows.
-                    <br></br>Modified multiple Unreal Engine plugin features while maintaining clean module separation and proper build.cs dependency hygiene.`,
+                  --- Professionally Worked on as Gameplay Engineer ---
+<pre> 
+  - Multiplayer
+  - Massive Open World
+  - AAA
+  - Shipped (01/2025)
+</pre>`,
                   "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "Replicated AI Pathing And Enemy Detection",
-                  `Built an AI system featuring replicated pathing, perception-based enemy detection, and state-driven behavior (patrolling, suspicious, and alert).
-                  <br></br>Developed using Unreal Engine's Behavior Trees with a custom C++ asynchronous task callable in blueprints running at adjustable intervals for optimized performance.
-                  <br></br>Implemented dynamic floating UI to display NPC awareness states in real time.
-                  <br></br>Integrated with Unreal's Game Animation Sample project, 
-                  combining C++ logic, Blueprints, and replicated behaviors for networked multiplayer scenarios.`,
-                  "https://github.com/Ricard0Brites/AI_Demo"),
+                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI",
+                  ` --- Personal Project ---
+                  <br></br> AI system in Unreal Engine using perception with states. The Project demosntrates 
+<pre> 
+  - AI Pathing
+  - Enemy Detection (Vision, Sound, and Damage)
+  - Asynchronous Dynamic State Switching
+  - Interaction
+  - Weapon Mechanics 
+  - Animations
+  - Dynamic UI (Custom Shader)
+</pre>`,
+                "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
                 this.#ProjectEntryObject(
                   GameEngineCover,
                   "C++ Game Engine",
                   `
-                  Custom lightweight 2D focused C++ Game Engine using OpenGL
-                  <br></br>Built core systems: rendering pipeline, event system, input handling, collision detection, and entity management.
-                  <br></br>Optimized rendering for real-time performance, achieving 1500+ FPS uncapped in development environments.
+                  --- University Project ---
+                  <br></br>
+                  Custom lightweight C++ Game Engine made using OpenGL.
+                  <br></br>Built systems: 
+<pre> 
+  - Entity management
+  - Collision
+  - Render
+  - Event
+  - Input
+</pre>
                   `,
-                  "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
-                  this.#ProjectEntryObject(
-                  CVCover,
-                  "Curriculum Website",
-                  `
-                    <br></br>Developed a responsive single-page portfolio showcasing projects, skills, and experience.
-                    <br></br>Implemented React components styled with TailwindCSS.
-                  `,
-                  "https://github.com/Ricard0Brites/cv-website/tree/one-pager"),
-                this.#ProjectEntryObject(
-                  JSONEditorCover,
-                  "WPF JSON Editor (MVVM)",
-                  `
-                  JSON Editor application built with WPF in C# using the MVVM pattern.
-                  <br></br>Implements data binding, commands, and observable collections for responsive UI updates.
-                  <br></br>Supports creating, editing, and validating JSON structures with real-time feedback.
-                  `,
-                  "https://github.com/Ricard0Brites/JSON_Editor/tree/main")
+                  "https://github.com/Ricard0Brites/Game-Engine/tree/main")
               ]
             } />
           </div>

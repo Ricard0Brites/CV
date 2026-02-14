@@ -38,6 +38,9 @@ hr {
   .print-only{
     display: flow-root !important;
   }
+  .link {
+    text-decoration: none !important;
+  }
 }
 
 .print-only{
