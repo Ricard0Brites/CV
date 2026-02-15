@@ -29,7 +29,7 @@ export default function AboutMeSection({ Title, Name, PhotoObj, Description })
                     {Name}
                 </div>
                 <div className="ml-4 mt-4  text-zinc-500 dark:text-zinc-400">
-                    {Description}
+                    <div dangerouslySetInnerHTML={{__html: Description }}></div>
                 </div>
             </div>
         </div>

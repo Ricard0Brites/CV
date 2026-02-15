@@ -144,8 +144,17 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoObj={Photo}
-              Description={`Generalist Unreal Engine Developer with 3 years of professional experience in game development and a shipped AAA game. Proficient in Gameplay Ability System, Gameplay Tags, 
-                multiplayer replication, and UI development. Experienced with Perforce and Atlassian tools. Fast learner focused on building maintainable, performant systems. Actively seeking relocation opportunities.`}
+              Description={`
+<pre>
+ C++ Gameplay Programmer with 3 years of professional experience in the video game industry and credits on a shipped AAA title.
+
+ Strong foundation in C++ and linear algebra, with experience implementing and iterating gameplay systems in interdisciplinary collaboration.
+ 
+ Adaptable, fast learner motivated to contribute across all aspects of development.
+
+ Actively seeking relocation opportunities.
+</pre>
+                `}
             />
           </div>
 
