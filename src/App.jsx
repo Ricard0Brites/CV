@@ -251,7 +251,7 @@ export default class App extends Component
                   "https://store.epicgames.com/en-US/p/decimated-de8da4"),
                 this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI",
                   ` --- Personal Project ---
-                  <br></br> AI system in Unreal Engine using perception with states. The Project demosntrates 
+                  <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
 <pre> 
   - AI Pathing
   - Enemy Detection (Vision, Sound, and Damage)
