@@ -12,7 +12,7 @@ export default function RelocationSection({ Title, Text })
                 <ul>
                   
                   <li className="dark:text-zinc-400 text-zinc-500">
-                    Awaiting Visa Process Finalization
+                    Valid Work Visa
                   </li>
                 </ul>
               </li>
