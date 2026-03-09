@@ -254,6 +254,7 @@ export default class App extends Component
                   <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
 <pre> 
   - AI Pathing
+  - State Driven behavior (Attack Enemy, Run To Cover)
   - Enemy Detection (Vision, Sound, and Damage)
   - Asynchronous Dynamic State Switching
   - Interaction
