@@ -8,11 +8,10 @@ export default function RelocationSection({ Title, Text })
        
        <ul className="pl-4">
               <li className="dark:text-zinc-200 text-zinc-600 text-base font-medium leading-normal whitespace-normal">
-               Canada <span className="text-zinc-500 dark:text-zinc-500 text-sm"></span>
+               Canada <span className="text-zinc-500 dark:text-zinc-500 text-sm">(Valid Work Visa)</span>
                 <ul>
                   
                   <li className="dark:text-zinc-400 text-zinc-500">
-                    Valid Work Visa
                   </li>
                 </ul>
               </li>
