@@ -146,7 +146,7 @@ export default class App extends Component
               PhotoObj={Photo}
               Description={`
 <pre>
- C++ Gameplay Programmer with 3 years of professional experience in the video game industry and credits on a shipped AAA title.
+ C++ Gameplay Programmer with a valid Canadian open work permit, 3 years of professional experience in the video game industry, and credits on a shipped AAA title, Decimated.
 
  Strong foundation in C++ and linear algebra, with experience implementing and iterating gameplay systems in interdisciplinary collaboration.
  
