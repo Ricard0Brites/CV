@@ -91,3 +91,8 @@ hr {
   background-color: rgba(100,100,100,0.0); /* thumb color */
   border-radius: 5px;
 }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

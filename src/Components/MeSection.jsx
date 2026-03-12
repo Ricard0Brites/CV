@@ -21,9 +21,7 @@ export default function AboutMeSection({ Title, Name, PhotoObj, Description })
             <div className="
             flex flex-col            
             ml-4
-            overflow-scroll
              max-w-9/12
-             max-h-150
             ">
                 <div className="text-xl dark:text-zinc-200 text-zinc-600">
                     {Name}
