@@ -12,7 +12,7 @@ export default function RelocationSection({ Title, Text })
                 <ul>
                   
                   <li className="dark:text-zinc-400 text-zinc-500">
-                    Valid Work Visa
+                    Valid Open Work Visa
                   </li>
                 </ul>
               </li>
