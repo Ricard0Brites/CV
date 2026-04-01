@@ -105,7 +105,7 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           {Name}
         </h1>
         <p className={`text-xs ${SecondaryTextColor}`}>
-          {Role} · {Location}
+          {Role}
         </p>
       </a> 
       <button
