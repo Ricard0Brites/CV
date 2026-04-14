@@ -6,7 +6,7 @@ export default function Header()
   /* Data */
     const Name = "Ricardo Brites";
     const Role = "Gameplay Programmer";
-    const Location = "Leiria, Portugal";
+    const Location = "Brampton Ontario";
 
     /* Dark Coloring */
     const Dark_PrimarBGColor = 'bg-zinc-600';
@@ -105,7 +105,7 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           {Name}
         </h1>
         <p className={`text-xs ${SecondaryTextColor}`}>
-          {Role}
+          {Role} · {Location}
         </p>
       </a> 
       <button
