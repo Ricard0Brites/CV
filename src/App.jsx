@@ -179,10 +179,10 @@ export default class App extends Component
 
         <h3 className="text-lg font-bold leading-tight">
           AAA Gameplay Programmer 
-          <span className="font-normal opacity-60">|</span> 
-          <nbsp> </nbsp>3+ Years Experience 
-          <span className="font-normal opacity-60">|</span> 
-          <nbsp> </nbsp>Shipped: Decimated
+          <span className="font-normal opacity-60"> | </span> 
+          3+ Years Experience 
+          <span className="font-normal opacity-60"> | </span> 
+          Shipped: Decimated
         </h3>
 
         <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
