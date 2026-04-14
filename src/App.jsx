@@ -144,17 +144,47 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoObj={Photo}
-              Description={`
-<pre>
- C++ Gameplay Programmer with a valid Canadian open work permit, 3 years of professional experience in the video game industry, and credits on a shipped AAA title, Decimated.
+              Description={<div className="flex flex-col gap-3 font-sans">
+        {/* Visa Badge: Adaptive for Light/Dark mode */}
+        <div>
+          <span className="
+            inline-block
+            px-3
+            py-1
+            rounded-md
+            text-xs
+            font-bold
+            uppercase
+            tracking-wider
+            bg-green-600
+            text-white
+            dark:bg-green-500/20
+            dark:text-green-400 
+            dark:border
+            dark:border-green-500/30"
+          >
+            IEC Working Holiday Visa — 24 Months Remaining
+          </span>
+        </div>
 
- Strong foundation in C++ and linear algebra, with experience implementing and iterating gameplay systems in interdisciplinary collaboration.
- 
- Adaptable, fast learner motivated to contribute across all aspects of development.
+        <h3 className="text-lg font-bold leading-tight">
+          AAA Gameplay Programmer 
+          <span className="font-normal opacity-60">|</span> 
+          <nbsp> </nbsp>3+ Years Experience 
+          <span className="font-normal opacity-60">|</span> 
+          <nbsp> </nbsp>Shipped: Decimated
+        </h3>
 
- Actively seeking relocation opportunities.
-</pre>
-                `}
+        <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+          Strong foundation in <strong>C++ and Linear Algebra</strong>, with a proven track record of engineering and iterating on 
+          complex systems within interdisciplinary AAA environments.
+        </p>
+
+        <div className="mt-2 flex items-center gap-2 font-semibold text-sm">
+          <span>Actively seeking relocation opportunities.</span>
+        </div>
+      </div>
+    }
             />
           </div>
 
