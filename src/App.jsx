@@ -177,22 +177,16 @@ export default class App extends Component
           </span>
         </div>
 
-        <h3 className="text-lg font-bold leading-tight">
-          AAA Gameplay Programmer 
-          <span className="font-normal opacity-60"> | </span> 
-          3+ Years Experience 
-          <span className="font-normal opacity-60"> | </span> 
-          Shipped: Decimated
-        </h3>
+        <span className="font-bold leading-tight"> AAA Gameplay Programmer | 3+ Years Experience | Shipped: Decimated </span>
 
         <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
           Versed in <strong>C++ and Linear Algebra</strong>, with a track record of engineering and iterating on 
           complex systems within interdisciplinary AAA environments.
         </p>
 
-        <div className="mt-2 flex items-center gap-2 font-semibold text-sm">
+        <div className="flex items-center gap-2 font-semibold">
           <span>Actively seeking relocation opportunities.</span>
-          <span>Can relocate within 21 days.</span>
+          <span>Prepared to mobilize within a three-week window under standard global conditions.</span>
         </div>
       </div>
     }
