@@ -162,9 +162,8 @@ export default class App extends Component
             px-3
             py-1
             rounded-md
-            text-xs
+            text-sm
             font-bold
-            uppercase
             tracking-wider
             bg-green-600
             text-white
@@ -173,21 +172,15 @@ export default class App extends Component
             dark:border
             dark:border-green-500/30"
           >
-            IEC Working Holiday Visa — 24 Months Remaining
+            IEC Working Holiday Visa (24 Months Remaining)
           </span>
         </div>
-
         <span className="font-bold leading-tight"> AAA Gameplay Programmer | 3+ Years Experience | Shipped: Decimated </span>
-
-        <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+        <span>
           Versed in <strong>C++ and Linear Algebra</strong>, with a track record of engineering and iterating on 
           complex systems within interdisciplinary AAA environments.
-        </p>
-
-        <div className="flex items-center gap-2 font-semibold">
-          <span>Actively seeking relocation opportunities.</span>
-          <span>Prepared to mobilize within a three-week window under standard global conditions.</span>
-        </div>
+        </span>
+        <span>Actively seeking relocation opportunities. Prepared to mobilize within a three-week window under standard global conditions.</span>
       </div>
     }
             />
