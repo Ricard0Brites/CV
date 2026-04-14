@@ -31,8 +31,7 @@ export default function ExperienceSection({ Title, Objects = [] })
                             </div>                            
                           </div>
                           <div className="flex flex-1">
-                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-sm font-normal leading-3.7 overflow-x-hidden overflow-y-scroll break-after-all" dangerouslySetInnerHTML={{ __html: value.Description }}>
-                            </p>
+                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-sm font-normal leading-3.7 overflow-x-hidden overflow-y-scroll break-after-all" >{ value.Description }</p>
                           </div>
                         </div>
                     )

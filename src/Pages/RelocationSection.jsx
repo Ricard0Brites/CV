@@ -12,6 +12,7 @@ export default function RelocationSection({ Title, Text })
                 <ul>
                   
                   <li className="dark:text-zinc-400 text-zinc-500">
+                    IEC Working Holiday Visa Valid for 24 Months
                   </li>
                 </ul>
               </li>

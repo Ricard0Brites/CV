@@ -22,40 +22,38 @@ const SkillsList =
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
     {slug: "Csharp", rating:4, DisplayText:"C#"},
-    {slug: "Dotnet", rating:4, DisplayText:".NET"},
-    //{slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    {slug: "Python", rating:3, DisplayText:"Python"},
-    {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
-    //{slug: "Unity", rating:3, DisplayText:"Unity"},
-    {slug: "Jira", rating:4, DisplayText:"Jira"},
-    {slug: "Confluence", rating:4, DisplayText:"Confluence"},
-    {slug: "Figma", rating:3, DisplayText:"Figma"},
-    {slug: "Git", rating:3, DisplayText:"Git"},
-    {slug: "Github", rating:3, DisplayText:"Github"},
-    {slug: "Perforce", rating:4, DisplayText:"Perforce"},
-    //{slug: "Html5", rating:3, DisplayText:"HTML"},
-    //{slug: "Css", rating:3, DisplayText:"CSS"},
-    //{slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
+    // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    //{slug: "React", rating:3, DisplayText:"React"},
-    //{slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
-    //  {slug: "Django", rating:3, DisplayText:"Django"},
+    // {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    {slug: "Python", rating:3, DisplayText:"Python"},
+    {slug: "Dotnet", rating:4, DisplayText:".NET"},
+    {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
+    // {slug: "Unity", rating:3, DisplayText:"Unity"},
+    // {slug: "Jira", rating:4, DisplayText:"Jira"},
+    // {slug: "Confluence", rating:4, DisplayText:"Confluence"},
+    // {slug: "Figma", rating:3, DisplayText:"Figma"},
+    {slug: "Git", rating:3, DisplayText:"Git"},
+    //{slug: "Github", rating:3, DisplayText:"Github"},
+    {slug: "Perforce", rating:5, DisplayText:"Perforce"},
+    // {slug: "Html5", rating:3, DisplayText:"HTML"},
+    // {slug: "Css", rating:3, DisplayText:"CSS"},
+    // {slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
+    // {slug: "React", rating:3, DisplayText:"React"},
+    // {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    // {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
     // {slug: "Notion", rating:4},
-    {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
-    {slug: "Windows11", rating:5, DisplayText:"Windows"},
+    // {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
+    // {slug: "Windows11", rating:5, DisplayText:"Windows"},
      {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
     // {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
     // {slug: "Pycharm", rating:3},
     // {slug: "Ssh", rating:4},
 ];
 
-
 export default class App extends Component 
 {
-  
   componentDidMount() 
   {
     const hash = window.location.hash;
@@ -109,7 +107,7 @@ export default class App extends Component
    * @param { string } Role - Role Name eg: Game Developer
    * @param { string } Location - Location eg: Remote, Portugal
    * @param { string } Time - Time eg: 2020-2021
-   * @param { string } Description - Description of functions eg: "Mopped the floors"
+   * @param { object } Description - Description of functions eg: "Mopped the floors"
    * @returns { object }
    */
   #ExperienceEntryObject(CompanyName, CompanyLink, Role, Location, Time, Description)
@@ -124,6 +122,18 @@ export default class App extends Component
     };
   }
 
+  #GetCommunication()
+  {
+    return <div className='break-inside-avoid'>
+            <ExperienceSection Title={"Communication"} Objects=
+            {
+              [ 
+                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
+                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
+              ]
+            } />
+          </div> ;
+  }
 
   GetFrontEnd() {
     return (
@@ -144,17 +154,48 @@ export default class App extends Component
               Title={"About Me"}
               Name={'Ricardo Brites - 24'}
               PhotoObj={Photo}
-              Description={`
-<pre>
- C++ Gameplay Programmer with a valid Canadian open work permit, 3 years of professional experience in the video game industry, and credits on a shipped AAA title, Decimated.
+              Description={<div className="flex flex-col gap-3 font-sans">
+        {/* Visa Badge: Adaptive for Light/Dark mode */}
+        <div>
+          <span className="
+            inline-block
+            px-3
+            py-1
+            rounded-md
+            text-xs
+            font-bold
+            uppercase
+            tracking-wider
+            bg-green-600
+            text-white
+            dark:bg-green-500/20
+            dark:text-green-400 
+            dark:border
+            dark:border-green-500/30"
+          >
+            IEC Working Holiday Visa — 24 Months Remaining
+          </span>
+        </div>
 
- Strong foundation in C++ and linear algebra, with experience implementing and iterating gameplay systems in interdisciplinary collaboration.
- 
- Adaptable, fast learner motivated to contribute across all aspects of development.
+        <h3 className="text-lg font-bold leading-tight">
+          AAA Gameplay Programmer 
+          <span className="font-normal opacity-60"> | </span> 
+          3+ Years Experience 
+          <span className="font-normal opacity-60"> | </span> 
+          Shipped: Decimated
+        </h3>
 
- Actively seeking relocation opportunities.
-</pre>
-                `}
+        <p className="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+          Versed in <strong>C++ and Linear Algebra</strong>, with a track record of engineering and iterating on 
+          complex systems within interdisciplinary AAA environments.
+        </p>
+
+        <div className="mt-2 flex items-center gap-2 font-semibold text-sm">
+          <span>Actively seeking relocation opportunities.</span>
+          <span>Can relocate within 21 days.</span>
+        </div>
+      </div>
+    }
             />
           </div>
 
@@ -176,34 +217,35 @@ export default class App extends Component
             />
           </div>
 
+          <div className='print-only'>
+            {this.#GetCommunication()}
+          </div>
           <div className='break-inside-avoid'>
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer - Decimated", "Remote", "09/2022 - 09/2025", 
-                  `<ul>
-                      <li class='bullet-li'>Implemented the player survival stat system (Water, Food, Blood, Health) with fully replicated logic and synchronized UI.</li>
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "09/2022 - 09/2025", 
+                  <ul>
+                    <li class="bullet-li">Architected a <strong> networked player survival system</strong> (Health, Hunger, Hydration, Blood) utilizing <strong>UE Replication</strong> for server-client synchronization and integrated <strong>PlayFab</strong> for persistent cloud-based saving.</li>
+                    
+                    <li class="bullet-li">Engineered a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration;</li>
 
-                      <li class='bullet-li'>Expanded the weapon system with new gameplay stats, UI-exposed data, interaction logic, and a modular sound-implementation pipeline supporting gunplay features and designer iteration.</li>
-
-                      <li class='bullet-li'>Built internal systems enabling the sound designer to integrate menu and UI SFX efficiently, accelerating iteration workflows.</li>
-
-                      <li class='bullet-li'>Optimized the vehicle and engine audio pipeline, eliminating idle-instance overflow and improving performance and clarity by ~850% through dynamic instance management.</li>
-
-                      <li class='bullet-li'>Created the complete circular gauge vehicle dashboard UI (Speed, Fuel, Nitro) using custom materials.</li>
-
-                      <li class='bullet-li'>Overhauled the entire input system, consolidating actions and integrating them into a scalable settings framework with clean rebinding support.</li>
-
-                      <li class='bullet-li'>Conducted technical research and produced internal documentation for the redesigned input system, improving onboarding and cross-team understanding.</li>
-
-                      <li class='bullet-li'>Designed and implemented the in-game map UI with dynamic player markers, objective indicators, and real-time updates driven by replicated game data.</li>
-
-                      <li class='bullet-li'>Developed PlayFab cloud scripts to reset and manage player stats across all accounts, improving debugging, QA workflows, and live-ops maintenance.</li>
-
-                      <li class='bullet-li'>Implemented features inside standalone Unreal Engine plugins, managing build.cs dependencies, avoiding forbidden references, and maintaining clean module separation.</li>
-                 
-                  </ul>`),
-                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "Leiria - Portugal", "03/2019 - 07/2019", "Designed and developed a fully functional web store using Django.")
+                    <li class="bullet-li"> Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
+                    
+                    <li class="bullet-li">Refined weapon systems and gameplay stats to align with design specifications.</li>
+                    
+                    <li class="bullet-li"> Authored a <strong>sound pipeline</strong> to support gunplay features and designer-led iteration.</li>
+                    
+                    <li class="bullet-li">Optimized vehicle and engine audio architecture, achieving an <strong>850% performance gain</strong> by resolving idle-instance creation through an instance management system.</li>
+                    
+                    <li class="bullet-li">Developed 95% of Decimated's user interface while in direct collaboration with producers, user interface designer, and sound designer.</li>
+                    
+                    <li class="bullet-li">Refactored the Input System, consolidating actions into a scalable framework with rebindable controls and authored <strong>technical documentation</strong> to improve team-wide onboarding.</li>
+                    
+                    <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
+                    
+                    <li class="bullet-li">Implemented core features within standalone Unreal Engine plugins, managing <strong>Build.cs dependencies</strong> and ensuring clean module separation.</li>
+                </ul>)
               ]
             }/>
           </div>
@@ -211,8 +253,8 @@ export default class App extends Component
             <ExperienceSection Title={"Education"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria - Portugal", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
-                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria - Portugal", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
+                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
+                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
               ]
             } />
           </div>
@@ -221,18 +263,8 @@ export default class App extends Component
             <RelocationSection Title={'Relocation & Work Authorization'}/>
           </div>
 
-          <div className='break-inside-avoid'>
-            <ExperienceSection Title={"Communication"} Objects=
-            {
-              [ 
-                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
-                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
-              ]
-            } />
-          </div>
-
-          <div className='break-inside-avoid print-only'>
-            <RelocationSection Title={'Relocation & Work Authorization'}/>
+          <div className='no-print'>
+            {this.#GetCommunication()}
           </div>
 
           <div className='break-inside-avoid'>
@@ -249,7 +281,7 @@ export default class App extends Component
   - Shipped (01/2025)
 </pre>`,
                   "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI",
+                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI Demo In Unreal Engine",
                   ` --- Personal Project ---
                   <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
 <pre> 
