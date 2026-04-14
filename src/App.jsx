@@ -52,10 +52,8 @@ const SkillsList =
     // {slug: "Ssh", rating:4},
 ];
 
-
 export default class App extends Component 
 {
-  
   componentDidMount() 
   {
     const hash = window.location.hash;
@@ -124,6 +122,18 @@ export default class App extends Component
     };
   }
 
+  #GetCommunication()
+  {
+    return <div className='break-inside-avoid'>
+            <ExperienceSection Title={"Communication"} Objects=
+            {
+              [ 
+                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
+                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
+              ]
+            } />
+          </div> ;
+  }
 
   GetFrontEnd() {
     return (
@@ -207,31 +217,35 @@ export default class App extends Component
             />
           </div>
 
+          <div className='print-only'>
+            {this.#GetCommunication()}
+          </div>
           <div className='break-inside-avoid'>
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer - Decimated", "Remote", "09/2022 - 09/2025", 
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "09/2022 - 09/2025", 
                   <ul>
                     <li class="bullet-li">Architected a <strong> networked player survival system</strong> (Health, Hunger, Hydration, Blood) utilizing <strong>UE Replication</strong> for server-client synchronization and integrated <strong>PlayFab</strong> for persistent cloud-based saving.</li>
                     
-                    <li class="bullet-li">Engineered a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration; <strong>Mentored the sound designer</strong> in <strong>Unreal Engine</strong> workflows, enabling independent project-wide sound integration.</li>
+                    <li class="bullet-li">Engineered a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration;</li>
+
+                    <li class="bullet-li"> Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
                     
                     <li class="bullet-li">Refined weapon systems and gameplay stats to align with design specifications.</li>
                     
                     <li class="bullet-li"> Authored a <strong>sound pipeline</strong> to support gunplay features and designer-led iteration.</li>
                     
-                    <li class="bullet-li">Optimized vehicle and engine audio architecture, achieving an <strong>850% performance gain</strong> by resolving idle-instance overflows through an instance management system.</li>
+                    <li class="bullet-li">Optimized vehicle and engine audio architecture, achieving an <strong>850% performance gain</strong> by resolving idle-instance creation through an instance management system.</li>
                     
-                    <li class="bullet-li"><strong>Developed UI components</strong>, including a material-based circular vehicle dashboard and a real-time dynamic map with replicated player and world indicators.</li>
+                    <li class="bullet-li">Developed 95% of Decimated's user interface while in direct collaboration with producers, user interface designer, and sound designer.</li>
                     
                     <li class="bullet-li">Refactored the Input System, consolidating actions into a scalable framework with rebindable controls and authored <strong>technical documentation</strong> to improve team-wide onboarding.</li>
                     
                     <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
                     
                     <li class="bullet-li">Implemented core features within standalone Unreal Engine plugins, managing <strong>Build.cs dependencies</strong> and ensuring clean module separation.</li>
-                </ul>),
-                this.#ExperienceEntryObject("Arxi", "https://www.arxi.pt/en_US", "Web Development Intern", "", "03/2019 - 07/2019", "Designed and developed a fully functional web store using Django.")
+                </ul>)
               ]
             }/>
           </div>
@@ -249,18 +263,8 @@ export default class App extends Component
             <RelocationSection Title={'Relocation & Work Authorization'}/>
           </div>
 
-          <div className='break-inside-avoid'>
-            <ExperienceSection Title={"Communication"} Objects=
-            {
-              [ 
-                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
-                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
-              ]
-            } />
-          </div>
-
-          <div className='break-inside-avoid print-only'>
-            <RelocationSection Title={'Relocation & Work Authorization'}/>
+          <div className='no-print'>
+            {this.#GetCommunication()}
           </div>
 
           <div className='break-inside-avoid'>
@@ -277,7 +281,7 @@ export default class App extends Component
   - Shipped (01/2025)
 </pre>`,
                   "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI",
+                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI Demo In Unreal Engine",
                   ` --- Personal Project ---
                   <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
 <pre> 
