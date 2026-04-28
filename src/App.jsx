@@ -211,7 +211,7 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "09/2022 - 09/2025", 
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
                     <li class="bullet-li">Architected a <strong> networked player survival system</strong> (Health, Hunger, Hydration, Blood) utilizing <strong>UE Replication</strong> for server-client synchronization and integrated <strong>PlayFab</strong> for persistent cloud-based saving.</li>
                     
