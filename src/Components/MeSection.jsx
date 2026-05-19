@@ -16,7 +16,7 @@ export default function AboutMeSection({ Title, Name, PhotoObj, Description })
         <div className="flex flex-row">
             
             {/* Photo Column */}
-            <div className="flex ml-4 w-[300px] min-w-1/10">
+            <div className="flex ml-4 w-[300px] min-w-1/10 no-print">
                 <img className="self-center rounded-xl" src={PhotoObj}></img>
             </div>
 

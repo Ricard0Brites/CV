@@ -25,9 +25,9 @@ const SkillsList =
     // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    {slug: "Python", rating:3, DisplayText:"Python"},
-    {slug: "Dotnet", rating:4, DisplayText:".NET"},
-    {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
+    //{slug: "Python", rating:3, DisplayText:"Python"},
+    //{slug: "Dotnet", rating:4, DisplayText:".NET"},
+    //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
@@ -128,14 +128,15 @@ export default class App extends Component
             <ExperienceSection Title={"Communication"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
+                //this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
                 this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
               ]
             } />
           </div> ;
   }
 
-  GetFrontEnd() {
+  GetFrontEnd() 
+  {
     return (
       <div>
         <Header />
@@ -212,25 +213,18 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
-                    <li class="bullet-li">Architected a <strong> networked player survival system</strong> (Health, Hunger, Hydration, Blood) utilizing <strong>UE Replication</strong> for server-client synchronization and integrated <strong>PlayFab</strong> for persistent cloud-based saving.</li>
-                    
-                    <li class="bullet-li">Engineered a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration;</li>
+                    <li class="bullet-li">Designed and implemented a core multiplayer survival system using Unreal Engine replication and PlayFab for persistence.</li>
 
-                    <li class="bullet-li"> Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
-                    
-                    <li class="bullet-li">Refined weapon systems and gameplay stats to align with design specifications.</li>
-                    
-                    <li class="bullet-li"> Authored a <strong>sound pipeline</strong> to support gunplay features and designer-led iteration.</li>
-                    
-                    <li class="bullet-li">Optimized vehicle and engine audio architecture, achieving an <strong>850% performance gain</strong> by resolving idle-instance creation through an instance management system.</li>
-                    
-                    <li class="bullet-li">Developed 95% of Decimated's user interface while in direct collaboration with producers, user interface designer, and sound designer.</li>
-                    
                     <li class="bullet-li">Refactored the Input System, consolidating actions into a scalable framework with rebindable controls and authored <strong>technical documentation</strong> to improve team-wide onboarding.</li>
                     
-                    <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
+                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration;</li>
+
+                    <li class="bullet-li">Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
                     
-                    <li class="bullet-li">Implemented core features within standalone Unreal Engine plugins, managing <strong>Build.cs dependencies</strong> and ensuring clean module separation.</li>
+                    <li class="bullet-li">Optimized vehicle and engine audio architecture, achieving an <strong>850% performance gain</strong> by managing idle instances.</li>
+
+                    <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
+
                 </ul>)
               ]
             }/>
