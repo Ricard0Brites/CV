@@ -169,14 +169,15 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           ${SecondaryBorderColor}
           transition-transform duration-500 ${showHeader ? "translate-y-0" : "-translate-y-full"
           }
+          text-xs
           z-[9999]
           `}
           >
         <div className="flex flex-1 items-center justify-center h-full px-4">
           {/* Left side */}
           <a href="/" className={`flex flex-col justify-center`}>
-            <h1 className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 text-l font-bold transition ease-in-out duration-300`}>
-              {Role} · {Location}
+            <h1 className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 font-bold transition ease-in-out duration-300`}>
+              {Location} | LinkedIn - ricard0brites | Email - ricardobrites.work@gmail.com
             </h1>
           </a> 
         </div>

@@ -54,6 +54,8 @@ const SkillsList =
 
 export default class App extends Component 
 {
+  printDebugFlag = false;
+
   componentDidMount() 
   {
     const hash = window.location.hash;
@@ -65,6 +67,7 @@ export default class App extends Component
     if (el) 
       el.scrollIntoView({ behavior: "smooth" });
   }
+
   render() 
   {
     return (
@@ -153,12 +156,12 @@ export default class App extends Component
           <div className='break-inside-avoid'>
             <AboutMeSection 
               Title={"About Me"}
-              Name={'Ricardo Brites - 24'}
+              Name={''}
               PhotoObj={Photo}
-              Description={<div className="flex flex-col gap-3 font-sans">
+              Description={<div className="flex flex-col gap-1 font-sans">
         {/* Visa Badge: Adaptive for Light/Dark mode */}
         <div>
-          <span className="
+          <span className={`
             inline-block
             px-3
             py-1
@@ -171,30 +174,40 @@ export default class App extends Component
             dark:bg-green-500/20
             dark:text-green-400 
             dark:border
-            dark:border-green-500/30"
+            dark:border-green-500/30
+            no-print
+            `}
+          >
+            IEC Working Holiday Visa (24 Months Remaining)
+          </span>
+
+          <span className={`
+            inline-block
+            px-3
+            py-[0.25]
+            rounded-md
+            text-xs
+            font-bold
+            tracking-wider
+            bg-green-600
+            text-white
+            dark:bg-green-500/20
+            dark:text-green-400 
+            dark:border
+            dark:border-green-500/30
+            print-only
+            `}
           >
             IEC Working Holiday Visa (24 Months Remaining)
           </span>
         </div>
-        <span>
-        Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
-        <span> Contributed and shipped a web3 AAA title and supported live-ops. </span>
-        <span> Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
-        <span> Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
+        <span> - Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
+        <span> - Contributed and shipped a web3 AAA title and supported live-ops. </span>
+        <span> - Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
+        <span> - Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
       </div>
     }
             />
-          </div>
-
-          <div className='print-only break-inside-avoid'>
-            <ExperienceSection Title={"Contact"} Objects=
-            {
-              [ 
-                this.#ExperienceEntryObject("Email", "", "ricardobrites.work@gmail.com", "", "", ""),
-                this.#ExperienceEntryObject("GitHub", "", "github.com/ricard0brites", "", "", ""),
-                this.#ExperienceEntryObject("LinkedIn", "", "linkedin.com/in/ricard0brites/", "", "", ""),
-              ]
-            } />
           </div>
           
           <div className='break-inside-avoid'>
@@ -204,9 +217,6 @@ export default class App extends Component
             />
           </div>
 
-          <div className='print-only'>
-            {this.#GetCommunication()}
-          </div>
           <div className='break-inside-avoid'>
             <ExperienceSection Title={"Experience"} Objects=
             {
@@ -221,7 +231,7 @@ export default class App extends Component
 
                     <li class="bullet-li">Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
                     
-                    <li class="bullet-li">Optimized vehicle and engine audio architecture, achieving an <strong>850% performance gain</strong> by managing idle instances.</li>
+                    <li class="bullet-li">Achieved an <strong>~850% performance gain</strong> by managing idle sound instances.</li>
 
                     <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
 
@@ -243,9 +253,7 @@ export default class App extends Component
             <RelocationSection Title={'Relocation & Work Authorization'}/>
           </div>
 
-          <div className='no-print'>
             {this.#GetCommunication()}
-          </div>
 
           <div className='break-inside-avoid'>
             <ProjectSection Title="Projects" Objects=

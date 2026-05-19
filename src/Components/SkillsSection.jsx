@@ -149,21 +149,37 @@ export default class SkillsSection extends Component {
 
         return (
             <div>
-
-                <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-                <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{this.props.Title}</h1>
-                <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
-                <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
-                    <div className='grid '
-                        style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
-                    >
-                        {
-                            this.#GetAllEntriesHTML()
-                        }
+                <div className='no-print'>
+                    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+                    <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{this.props.Title}</h1>
+                    <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
+                    <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
+                        <div className='grid '
+                            style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
+                        >
+                            {
+                                this.#GetAllEntriesHTML()
+                            }
+                        </div>
                     </div>
+                </div>
+
+                <div className='print-only'>
+                    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+                    <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{this.props.Title}</h1>
+                    <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
+                    <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
+                        <div className='grid '
+                            style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
+                        >
+                            {
+                                this.#GetAllEntriesHTML()
+                            }
+                        </div>
 
                 </div>
+            </div>
+
             </div>
         );
     }
