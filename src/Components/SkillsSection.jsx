@@ -92,7 +92,7 @@ export default class SkillsSection extends Component {
                     </div>
 
                     {/* Dots container */}
-                    <div className="flex space-x-1">
+                    <div className="hidden flex space-x-1">
                         {[...Array(5)].map((_, i) => (
                             <div
                                 key={i}

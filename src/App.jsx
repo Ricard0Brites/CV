@@ -24,29 +24,29 @@ const SkillsList =
     {slug: "Csharp", rating:4, DisplayText:"C#"},
     // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    // {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
     {slug: "Python", rating:3, DisplayText:"Python"},
     {slug: "Dotnet", rating:4, DisplayText:".NET"},
     {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
-    // {slug: "Jira", rating:4, DisplayText:"Jira"},
-    // {slug: "Confluence", rating:4, DisplayText:"Confluence"},
+    {slug: "Jira", rating:4, DisplayText:"Jira"},
+    {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     // {slug: "Figma", rating:3, DisplayText:"Figma"},
-    {slug: "Git", rating:3, DisplayText:"Git"},
-    //{slug: "Github", rating:3, DisplayText:"Github"},
+    // {slug: "Git", rating:3, DisplayText:"Git"},
+    // {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
     // {slug: "Css", rating:3, DisplayText:"CSS"},
     // {slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
     // {slug: "React", rating:3, DisplayText:"React"},
-    // {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
     // {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
     // {slug: "Notion", rating:4},
     // {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
     // {slug: "Windows11", rating:5, DisplayText:"Windows"},
-     {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
+    {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
     // {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
     // {slug: "Pycharm", rating:3},
     // {slug: "Ssh", rating:4},
@@ -175,12 +175,11 @@ export default class App extends Component
             IEC Working Holiday Visa (24 Months Remaining)
           </span>
         </div>
-        <span className="font-bold leading-tight"> AAA Gameplay Programmer | 3+ Years Experience | Shipped: Decimated </span>
         <span>
-          Versed in <strong>C++ and Linear Algebra</strong>, with a track record of engineering and iterating on 
-          complex systems within interdisciplinary AAA environments.
-        </span>
-        <span>Actively seeking relocation opportunities. Prepared to mobilize within a three-week window under standard global conditions.</span>
+        Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
+        <span> Contributed and shipped a web3 AAA title and supported live-ops. </span>
+        <span> Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
+        <span> Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
       </div>
     }
             />
