@@ -1,5 +1,3 @@
-var SectionCounter = 0;
-
 export default function AboutMeSection({ Title, Name, PhotoObj, Description }) 
 {
 
