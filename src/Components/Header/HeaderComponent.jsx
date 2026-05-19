@@ -175,11 +175,13 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           >
         <div className="flex flex-1 items-center justify-center h-full px-4">
           {/* Left side */}
-          <a href="/" className={`flex flex-col justify-center`}>
+          <div className=' w-full h-full flex flex-col items-center justify-evenly'>
             <h1 className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 font-bold transition ease-in-out duration-300`}>
-              {Location} | LinkedIn - ricard0brites | Email - ricardobrites.work@gmail.com
-            </h1>
-          </a> 
+              Ricardo Brites - 24 </h1>
+            <h1 className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 font-bold transition ease-in-out duration-300`}>
+              {Location} | LinkedIn - ricard0brites | Email - ricardobrites.work@gmail.com </h1>
+          </div>
+          
         </div>
       </header>
     </div>
