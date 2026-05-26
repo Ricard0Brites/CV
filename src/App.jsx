@@ -19,18 +19,18 @@ import Decimated from '/src/assets/Decimated.png';
 
 const SkillsList = 
 [
+  {slug: "Cplusplus", rating:5, DisplayText:"C++"},
+  {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
-    {slug: "Cplusplus", rating:5, DisplayText:"C++"},
     //{slug: "Csharp", rating:4, DisplayText:"C#"},
-    // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    //{slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    //{slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    {slug: "Jira", rating:4, DisplayText:"Jira"},
+    {slug: "Confluence", rating:4, DisplayText:"Confluence"},
+    {slug: "Javascript", rating:4, DisplayText:"Javascript"},
+    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
     {slug: "Python", rating:3, DisplayText:"Python"},
     //{slug: "Dotnet", rating:4, DisplayText:".NET"},
     //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
-    {slug: "Jira", rating:4, DisplayText:"Jira"},
-    {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     // {slug: "Figma", rating:3, DisplayText:"Figma"},
     // {slug: "Git", rating:3, DisplayText:"Git"},
     // {slug: "Github", rating:3, DisplayText:"Github"},
@@ -223,21 +223,17 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
-                    <li>Designed and implemented UI systems for Decimated, developing 95% of the user interface in strong collaboration within a multidisciplinary environment.</li>
-                    
                     <li >Applied debugging skills to resolve complex engine-level issues.</li>
                     
                     <li >Wrote clean, robust, performant, and maintainable C++ code to supervise and maintain the modules and systems underpinning core features managing dependencies for clean module separation.</li>
-                    
-                    <li >Addressed technical limitations by engineering a custom instance management system, optimizing code for efficient operation and achieving an 8.5x reduction in idle-instance creation.</li>
-                    
-                    <li >Read and interpreted game design documents for player survival mechanics (Health, Hunger, Hydration), actively participating in design feedback to translate gameplay stats into player feedback and align the systems with the intended user experience (UX).</li>
-                    
-                    <li>Applied principles of ergonomics and accessibility by refactoring the Input System into a scalable framework with rebindable controls.</li>
 
-                    <li >Authored technical documentation.</li>
-                    
                     <li >Engineered a custom audio implementation pipeline to facilitate designer-led iterations.</li>
+                    
+                    <li>Addressed technical limitations by engineering a custom instance management system, optimizing code for efficient operation and achieving an 8.5x reduction in idle-instance creation.</li>
+                    
+                    <li>Refactored the input system into a scalable framework with rebindable controls.</li>
+                    
+                    <li >Authored technical documentation.</li>
                 </ul>)
               ]
             }/>
