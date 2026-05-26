@@ -21,11 +21,11 @@ const SkillsList =
 [
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
-    {slug: "Csharp", rating:4, DisplayText:"C#"},
+    //{slug: "Csharp", rating:4, DisplayText:"C#"},
     // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    //{slug: "Python", rating:3, DisplayText:"Python"},
+    //{slug: "Javascript", rating:4, DisplayText:"Javascript"},
+    //{slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    {slug: "Python", rating:3, DisplayText:"Python"},
     //{slug: "Dotnet", rating:4, DisplayText:".NET"},
     //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
@@ -39,7 +39,7 @@ const SkillsList =
     // {slug: "Css", rating:3, DisplayText:"CSS"},
     // {slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
     // {slug: "React", rating:3, DisplayText:"React"},
-    {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    //{slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
     // {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
@@ -132,7 +132,7 @@ export default class App extends Component
             {
               [ 
                 //this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
-                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
+                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR-C2", "", ""),
               ]
             } />
           </div> ;
@@ -201,10 +201,10 @@ export default class App extends Component
             IEC Working Holiday Visa (24 Months Remaining)
           </span>
         </div>
-        <span> - Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
-        <span> - Contributed and shipped a web3 AAA title and supported live-ops. </span>
-        <span> - Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
-        <span> - Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
+        <span> Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
+        <span> Contributed and shipped a web3 AAA title and supported live-ops. </span>
+        <span> Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
+        <span> Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
       </div>
     }
             />
@@ -223,18 +223,21 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
-                    <li class="bullet-li">Designed and implemented a core multiplayer survival system using Unreal Engine replication and PlayFab for persistence.</li>
-
-                    <li class="bullet-li">Refactored the Input System, consolidating actions into a scalable framework with rebindable controls and authored <strong>technical documentation</strong> to improve team-wide onboarding.</li>
+                    <li>Designed and implemented UI systems for Decimated, developing 95% of the user interface in strong collaboration within a multidisciplinary environment.</li>
                     
-                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration;</li>
-
-                    <li class="bullet-li">Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
+                    <li >Applied debugging skills to resolve complex engine-level issues.</li>
                     
-                    <li class="bullet-li">Achieved an <strong>~850% performance gain</strong> by managing idle sound instances.</li>
+                    <li >Wrote clean, robust, performant, and maintainable C++ code to supervise and maintain the modules and systems underpinning core features managing dependencies for clean module separation.</li>
+                    
+                    <li >Addressed technical limitations by engineering a custom instance management system, optimizing code for efficient operation and achieving an 8.5x reduction in idle-instance creation.</li>
+                    
+                    <li >Read and interpreted game design documents for player survival mechanics (Health, Hunger, Hydration), actively participating in design feedback to translate gameplay stats into player feedback and align the systems with the intended user experience (UX).</li>
+                    
+                    <li>Applied principles of ergonomics and accessibility by refactoring the Input System into a scalable framework with rebindable controls.</li>
 
-                    <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
-
+                    <li >Authored technical documentation.</li>
+                    
+                    <li >Engineered a custom audio implementation pipeline to facilitate designer-led iterations.</li>
                 </ul>)
               ]
             }/>
@@ -243,8 +246,8 @@ export default class App extends Component
             <ExperienceSection Title={"Education"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
-                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
+                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and custom made C++ engines."),
+                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management.")
               ]
             } />
           </div>
