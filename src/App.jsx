@@ -257,6 +257,23 @@ export default class App extends Component
             <ProjectSection Title="Projects" Objects=
             {
               [
+                this.#ProjectEntryObject(
+                  GameEngineCover,
+                  "C++ Game Engine",
+                  `
+                  --- University Project ---
+                  <br></br>
+                  Custom lightweight C++ Game Engine made using OpenGL.
+                  <br></br>Built systems: 
+                <pre> 
+                - Entity management
+                - Collision
+                - Render
+                - Event
+                - Input
+                </pre>
+                  `,
+                  "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
                 this.#ProjectEntryObject(Decimated, "Decimated",
                   `
                   --- Professionally Worked on as Gameplay Engineer ---
@@ -280,24 +297,7 @@ export default class App extends Component
   - Animations
   - Dynamic UI (Custom Shader)
 </pre>`,
-                "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
-                this.#ProjectEntryObject(
-                  GameEngineCover,
-                  "C++ Game Engine",
-                  `
-                  --- University Project ---
-                  <br></br>
-                  Custom lightweight C++ Game Engine made using OpenGL.
-                  <br></br>Built systems: 
-<pre> 
-  - Entity management
-  - Collision
-  - Render
-  - Event
-  - Input
-</pre>
-                  `,
-                  "https://github.com/Ricard0Brites/Game-Engine/tree/main")
+                "https://github.com/Ricard0Brites/Unreal_AI_Demo")
               ]
             } />
           </div>
