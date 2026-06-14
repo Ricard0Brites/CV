@@ -22,7 +22,7 @@ const SkillsList =
   {slug: "Cplusplus", rating:5, DisplayText:"C++"},
   {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
-    //{slug: "Csharp", rating:4, DisplayText:"C#"},
+    {slug: "Csharp", rating:4, DisplayText:"C#"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
@@ -32,7 +32,7 @@ const SkillsList =
     //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
     // {slug: "Figma", rating:3, DisplayText:"Figma"},
-    // {slug: "Git", rating:3, DisplayText:"Git"},
+     {slug: "Git", rating:3, DisplayText:"Git"},
     // {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
@@ -223,6 +223,7 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
+                    <li> Designed and implemented UI systems for Decimated, developing 95% of the user interface in strong collaboration within a multidisciplinary environment. </li>
                     <li >Applied debugging skills to resolve complex engine-level issues.</li>
                     
                     <li >Wrote clean, robust, performant, and maintainable C++ code to supervise and maintain the modules and systems underpinning core features managing dependencies for clean module separation.</li>
