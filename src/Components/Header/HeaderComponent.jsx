@@ -177,9 +177,9 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           {/* Left side */}
           <div className=' w-full h-full flex flex-col items-center justify-evenly'>
             <h1 className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 font-bold transition ease-in-out duration-300`}>
-              Ricardo Brites - 24 </h1>
+              Ricardo Brites - 25 </h1>
             <h1 className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 font-bold transition ease-in-out duration-300`}>
-              {Location} | LinkedIn - ricard0brites | Email - ricardobrites.work@gmail.com </h1>
+              {Location} | LinkedIn - ricard0brites | Email - ricardobrites.work@gmail.com | (+351) 965 339 281 </h1>
           </div>
           
         </div>

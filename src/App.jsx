@@ -20,26 +20,27 @@ import Decimated from '/src/assets/Decimated.png';
 const SkillsList = 
 [
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
+    {slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
-    {slug: "Csharp", rating:4, DisplayText:"C#"},
+    // {slug: "Csharp", rating:4, DisplayText:"C#"},
     // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    //{slug: "Python", rating:3, DisplayText:"Python"},
-    //{slug: "Dotnet", rating:4, DisplayText:".NET"},
-    //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
+    // {slug: "Javascript", rating:4, DisplayText:"Javascript"},
+    // {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    // {slug: "Python", rating:3, DisplayText:"Python"},
+    // {slug: "Dotnet", rating:4, DisplayText:".NET"},
+    // {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     // {slug: "Figma", rating:3, DisplayText:"Figma"},
     // {slug: "Git", rating:3, DisplayText:"Git"},
-    // {slug: "Github", rating:3, DisplayText:"Github"},
+     {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
     // {slug: "Css", rating:3, DisplayText:"CSS"},
     // {slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
     // {slug: "React", rating:3, DisplayText:"React"},
-    {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    // {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
     // {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
@@ -131,7 +132,7 @@ export default class App extends Component
             <ExperienceSection Title={"Communication"} Objects=
             {
               [ 
-                //this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
+                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
                 this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
               ]
             } />
@@ -178,17 +179,16 @@ export default class App extends Component
             no-print
             `}
           >
-            IEC Working Holiday Visa (24 Months Remaining)
+            No sponsorship required
           </span>
 
           <span className={`
             inline-block
-            px-3
-            py-[0.25]
+            px-2
+            py-[0.15]
             rounded-md
-            text-xs
+            text-sm
             font-bold
-            tracking-wider
             bg-green-600
             text-white
             dark:bg-green-500/20
@@ -198,13 +198,15 @@ export default class App extends Component
             print-only
             `}
           >
-            IEC Working Holiday Visa (24 Months Remaining)
+            No sponsorship required
           </span>
         </div>
-        <span> - Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
-        <span> - Contributed and shipped a web3 AAA title and supported live-ops. </span>
-        <span> - Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
-        <span> - Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
+
+            <ul>
+              <li class="bullet-li"> Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine. </li>
+              <li class="bullet-li"> Contributed and shipped a AAA title and supported live-ops. </li>
+              <li class="bullet-li"> Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </li>
+            </ul>
       </div>
     }
             />
@@ -221,19 +223,20 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
+                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2026 - present", 
+                  <ul>
+                    <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
+
+                </ul>),
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
-                    <li class="bullet-li">Designed and implemented a core multiplayer survival system using Unreal Engine replication and PlayFab for persistence.</li>
-
-                    <li class="bullet-li">Refactored the Input System, consolidating actions into a scalable framework with rebindable controls and authored <strong>technical documentation</strong> to improve team-wide onboarding.</li>
+                    <li class="bullet-li">Refactored <strong>input controls</strong> consolidating in-place systems into a tailored scalable framework with rebind capabilities.</li>
                     
-                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline</strong> to accelerate SFX iteration;</li>
-
-                    <li class="bullet-li">Mentored the sound designer in <strong>Unreal Engine</strong>, enabling independent project-wide sound integration.</li>
+                    <li class="bullet-li">Designed, implemented, optimized, and debugged <strong>core multiplayer survival systems</strong>, leveraging Unreal Engine replication and PlayFab.</li>
                     
-                    <li class="bullet-li">Achieved an <strong>~850% performance gain</strong> by managing idle sound instances.</li>
-
-                    <li class="bullet-li">Automated backend maintenance via <strong>PlayFab cloud scripts</strong>, enabling global player stat resets and improving efficiency for QA workflows and live-ops debugging.</li>
+                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline with Gameplay Ability System</strong>.</li>
+                    
+                    <li class="bullet-li">Reduced idle audio instances by <strong>~90%</strong> by designing and implementing a sound instance management system.</li>
 
                 </ul>)
               ]
@@ -243,8 +246,8 @@ export default class App extends Component
             <ExperienceSection Title={"Education"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and C++"),
-                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management. Covered programming fundamentals (C, VB, SQL), network configuration, operating systems, and IT project workflows.")
+                this.#ExperienceEntryObject("IPL ESTG", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria, Portugal", "09/2020 - 07/2024", ""),
+                this.#ExperienceEntryObject("ESDS", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Secondary Computer Systems Management and Programming", "Leiria, Portugal", "09/2016 - 07/2019", "")
               ]
             } />
           </div>
