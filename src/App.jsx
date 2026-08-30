@@ -228,7 +228,7 @@ export default class App extends Component
                     <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
 
                 </ul>),
-                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.steampowered.com/app/1354980/Decimated/", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
                     <li class="bullet-li">Refactored <strong>input controls</strong> consolidating in-place systems into a tailored scalable framework with rebind capabilities.</li>
                     
