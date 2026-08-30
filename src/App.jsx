@@ -252,55 +252,6 @@ export default class App extends Component
           <div className='no-print'>
             {this.#GetCommunication()}
           </div>
-
-          <div className='break-inside-avoid'>
-            <ProjectSection Title="Projects" Objects=
-            {
-              [
-                this.#ProjectEntryObject(
-                  GameEngineCover,
-                  "C++ Game Engine",
-                  `
-                  --- University Project ---
-                  <br></br>
-                  Custom lightweight C++ Game Engine made using OpenGL.
-                  <br></br>Built systems: 
-                <pre> 
-                - Entity management
-                - Collision
-                - Render
-                - Event
-                - Input
-                </pre>
-                  `,
-                  "https://github.com/Ricard0Brites/Game-Engine/tree/main"),
-                this.#ProjectEntryObject(Decimated, "Decimated",
-                  `
-                  --- Professionally Worked on as Gameplay Engineer ---
-<pre> 
-  - Multiplayer
-  - Massive Open World
-  - AAA
-  - Shipped (01/2025)
-</pre>`,
-                  "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI Demo In Unreal Engine",
-                  ` --- Personal Project ---
-                  <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
-<pre> 
-  - AI Pathing
-  - State Driven behavior (Attack Enemy, Run To Cover)
-  - Enemy Detection (Vision, Sound, and Damage)
-  - Asynchronous Dynamic State Switching
-  - Interaction
-  - Weapon Mechanics 
-  - Animations
-  - Dynamic UI (Custom Shader)
-</pre>`,
-                "https://github.com/Ricard0Brites/Unreal_AI_Demo")
-              ]
-            } />
-          </div>
         </div>
       </div>
     );
