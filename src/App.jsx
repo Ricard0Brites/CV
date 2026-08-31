@@ -20,12 +20,12 @@ import Decimated from '/src/assets/Decimated.png';
 const SkillsList = 
 [
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
-    {slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
+    //{slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
-    // {slug: "Csharp", rating:4, DisplayText:"C#"},
+    {slug: "Csharp", rating:4, DisplayText:"C#"},
     // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    // {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    // {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
+     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
     // {slug: "Python", rating:3, DisplayText:"Python"},
     // {slug: "Dotnet", rating:4, DisplayText:".NET"},
     // {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
@@ -154,6 +154,7 @@ export default class App extends Component
             inline-block
             px-3
             py-1
+            
             rounded-md
             text-sm
             font-bold
@@ -189,11 +190,12 @@ export default class App extends Component
             No sponsorship required
           </span>
         </div>
-
             <ul>
               <li class="bullet-li"> Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine. </li>
               <li class="bullet-li"> Contributed and shipped a AAA title and supported live-ops. </li>
-              <li class="bullet-li"> Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </li>
+              <li class="bullet-li"> Background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development. </li>
+              <li class="bullet-li"> Collaborates across engineering, design, and art departments. </li>
+              <li class="bullet-li"> Provides mentorship to peer developers. </li>
             </ul>
       </div>
     }
@@ -211,7 +213,7 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2026 - present", 
+                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2026 - Present", 
                   <ul>
                     <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
 
@@ -222,9 +224,17 @@ export default class App extends Component
                     
                     <li class="bullet-li">Designed, implemented, optimized, and debugged <strong>core multiplayer survival systems</strong>, leveraging Unreal Engine replication and PlayFab.</li>
                     
-                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline with Gameplay Ability System</strong>.</li>
+                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline with Gameplay Ability System (GAS).</strong>.</li>
                     
                     <li class="bullet-li">Reduced idle audio instances by <strong>~90%</strong> by designing and implementing a sound instance management system.</li>
+
+                    <li class="bullet-li">Mentored peer developer.</li>
+                    
+                    <li class="bullet-li">Developed the majority <strong>( &gt;80% )</strong> of the User Interface present in the project.</li>
+                    
+                    <li class="bullet-li">Created <strong>server scripts</strong> optimizing QA and Live-Ops workflows.</li>
+
+                    <li class="bullet-li">Identified and fixed dependency issues maintaining clean module separation.</li>
 
                 </ul>)
               ]
@@ -240,9 +250,11 @@ export default class App extends Component
             } />
           </div>
 
+            {/*
           <div className='break-inside-avoid no-print'>
             <RelocationSection Title={'Relocation & Work Authorization'}/>
           </div>
+            */}
 
             {this.#GetCommunication()}
           </div>
