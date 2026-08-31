@@ -32,7 +32,7 @@ export default function AboutMeSection({ Title, Name, PhotoObj, Description })
         </div>
         
         <div className={`print-only`}>
-            <h1 className="text-bold dark:text-zinc-200 text-zinc-600 pt-4 flex">
+            <h1 className="font-bold dark:text-zinc-200 text-zinc-600 pt-4 flex">
                 {Title}
             </h1>
             

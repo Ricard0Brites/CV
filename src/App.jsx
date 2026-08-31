@@ -20,6 +20,7 @@ import Decimated from '/src/assets/Decimated.png';
 const SkillsList = 
 [
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
+    //{slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
     //{slug: "Csharp", rating:4, DisplayText:"C#"},
     // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
@@ -28,18 +29,24 @@ const SkillsList =
     {slug: "Python", rating:3, DisplayText:"Python"},
     //{slug: "Dotnet", rating:4, DisplayText:".NET"},
     //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
+     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
+     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    // {slug: "Python", rating:3, DisplayText:"Python"},
+    // {slug: "Dotnet", rating:4, DisplayText:".NET"},
+    // {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     // {slug: "Figma", rating:3, DisplayText:"Figma"},
     // {slug: "Git", rating:3, DisplayText:"Git"},
-    // {slug: "Github", rating:3, DisplayText:"Github"},
+     {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
     // {slug: "Css", rating:3, DisplayText:"CSS"},
     // {slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
     // {slug: "React", rating:3, DisplayText:"React"},
     //{slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+    // {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
     // {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
@@ -94,18 +101,6 @@ export default class App extends Component
 
   /**
    * 
-   * @param { object }Image - Image Object
-   * @param { string } Title -Title of the Project 
-   * @param { string } Description - Description of the project
-   * @param { string } Link - Link for the project (can be another page, can be a link to gihub, etc...)
-   * @returns { object }
-   */
-  #ProjectEntryObject(Image, Title, Description, Link) {
-    return { Image: [Image], Title: [Title], Description: [Description], Link: [Link] };
-  }
-
-  /**
-   * 
    * @param { string } CompanyName - Company Name eg: Riot Games
    * @param { string } Role - Role Name eg: Game Developer
    * @param { string } Location - Location eg: Remote, Portugal
@@ -131,8 +126,8 @@ export default class App extends Component
             <ExperienceSection Title={"Communication"} Objects=
             {
               [ 
-                //this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
-                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR-C2", "", ""),
+                this.#ExperienceEntryObject("Portuguese","", "Native", "", "", ""),
+                this.#ExperienceEntryObject("English", "", "Fluent", "CEFR C2", "", ""),
               ]
             } />
           </div> ;
@@ -165,6 +160,7 @@ export default class App extends Component
             inline-block
             px-3
             py-1
+            
             rounded-md
             text-sm
             font-bold
@@ -178,17 +174,16 @@ export default class App extends Component
             no-print
             `}
           >
-            IEC Working Holiday Visa (24 Months Remaining)
+            No sponsorship required
           </span>
 
           <span className={`
             inline-block
-            px-3
-            py-[0.25]
+            px-2
+            py-[0.15]
             rounded-md
-            text-xs
+            text-sm
             font-bold
-            tracking-wider
             bg-green-600
             text-white
             dark:bg-green-500/20
@@ -198,13 +193,16 @@ export default class App extends Component
             print-only
             `}
           >
-            IEC Working Holiday Visa (24 Months Remaining)
+            No sponsorship required
           </span>
         </div>
-        <span> Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine.</span>
-        <span> Contributed and shipped a web3 AAA title and supported live-ops. </span>
-        <span> Strong background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development </span>
-        <span> Effective cross-functional communicator and mentor who works in Agile Kanban teams.</span>
+            <ul>
+              <li class="bullet-li"> Gameplay Engineer with experience building <strong>multiplayer gameplay, tools, and user interface </strong> using C++ and Unreal Engine. </li>
+              <li class="bullet-li"> Contributed and <strong>shipped a AAA title </strong> and supported live-ops. </li>
+              <li class="bullet-li"> Background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development. </li>
+              <li class="bullet-li"> Collaborates across engineering, design, and art departments. </li>
+              <li class="bullet-li"> Provides mentorship to peer developers. </li>
+            </ul>
       </div>
     }
             />
@@ -221,23 +219,25 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Fracture Labs", "https://store.epicgames.com/en-US/p/decimated-de8da4", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
+                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2025 - Present", 
                   <ul>
-                    <li>Designed and implemented UI systems for Decimated, developing 95% of the user interface in strong collaboration within a multidisciplinary environment.</li>
-                    
-                    <li >Applied debugging skills to resolve complex engine-level issues.</li>
-                    
-                    <li >Wrote clean, robust, performant, and maintainable C++ code to supervise and maintain the modules and systems underpinning core features managing dependencies for clean module separation.</li>
-                    
-                    <li >Addressed technical limitations by engineering a custom instance management system, optimizing code for efficient operation and achieving an 8.5x reduction in idle-instance creation.</li>
-                    
-                    <li >Read and interpreted game design documents for player survival mechanics (Health, Hunger, Hydration), actively participating in design feedback to translate gameplay stats into player feedback and align the systems with the intended user experience (UX).</li>
-                    
-                    <li>Applied principles of ergonomics and accessibility by refactoring the Input System into a scalable framework with rebindable controls.</li>
+                    <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
 
-                    <li >Authored technical documentation.</li>
+                </ul>),
+                this.#ExperienceEntryObject("Fracture Labs", "https://store.steampowered.com/app/1354980/Decimated/", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
+                  <ul>
+                    <li class="bullet-li">Developed the majority <strong>( &gt;80% )</strong> of the User Interface present in the project.</li>
                     
-                    <li >Engineered a custom audio implementation pipeline to facilitate designer-led iterations.</li>
+                    <li class="bullet-li">Reduced idle audio instances by <strong>~90%</strong> by designing and implementing a sound instance management system.</li>
+                    
+                    <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline with Gameplay Ability System (GAS).</strong>.</li>
+                    
+                    <li class="bullet-li">Refactored <strong>input controls</strong> consolidating in-place systems into a tailored scalable framework with rebind capabilities.</li>
+                    
+                    <li class="bullet-li">Mentored peer developers.</li>
+
+                    <li class="bullet-li">Identified and fixed dependency issues maintaining clean module separation.</li>
+
                 </ul>)
               ]
             }/>
@@ -246,67 +246,20 @@ export default class App extends Component
             <ExperienceSection Title={"Education"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Polytechnic Institute of Leiria School of Technology and Management", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria", "09/2020 - 07/2024", "Practice-focused degree covering game programming, computer graphics, game design, and AI with industry tools such as Unreal Engine, Unity, and custom made C++ engines."),
-                this.#ExperienceEntryObject("Domingos Sequeira High School", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Computer Systems Management and Programming", "Leiria", "09/2016 - 07/2019", "Technical secondary education focused on software development, system administration, and database management.")
+                this.#ExperienceEntryObject("IPL ESTG", "https://www.ipleiria.pt/curso/licenciatura-em-jogos-digitais-e-multimedia/", "Bachelor's Degree in Game Development", "Leiria, Portugal", "09/2020 - 07/2024", ""),
+                this.#ExperienceEntryObject("ESDS", "http://www.esds.edu.pt/images/ano20232024/oferta_formativa_CP_2024_25.pdf#page=12&zoom=150%", "Secondary Computer Systems Management and Programming", "Leiria, Portugal", "09/2016 - 07/2019", "")
               ]
             } />
           </div>
 
+            {/*
           <div className='break-inside-avoid no-print'>
             <RelocationSection Title={'Relocation & Work Authorization'}/>
           </div>
+            */}
 
             {this.#GetCommunication()}
-
-          <div className='break-inside-avoid'>
-            <ProjectSection Title="Projects" Objects=
-            {
-              [
-                this.#ProjectEntryObject(Decimated, "Decimated",
-                  `
-                  --- Professionally Worked on as Gameplay Engineer ---
-<pre> 
-  - Multiplayer
-  - Massive Open World
-  - AAA
-  - Shipped (01/2025)
-</pre>`,
-                  "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI Demo In Unreal Engine",
-                  ` --- Personal Project ---
-                  <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
-<pre> 
-  - AI Pathing
-  - State Driven behavior (Attack Enemy, Run To Cover)
-  - Enemy Detection (Vision, Sound, and Damage)
-  - Asynchronous Dynamic State Switching
-  - Interaction
-  - Weapon Mechanics 
-  - Animations
-  - Dynamic UI (Custom Shader)
-</pre>`,
-                "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
-                this.#ProjectEntryObject(
-                  GameEngineCover,
-                  "C++ Game Engine",
-                  `
-                  --- University Project ---
-                  <br></br>
-                  Custom lightweight C++ Game Engine made using OpenGL.
-                  <br></br>Built systems: 
-<pre> 
-  - Entity management
-  - Collision
-  - Render
-  - Event
-  - Input
-</pre>
-                  `,
-                  "https://github.com/Ricard0Brites/Game-Engine/tree/main")
-              ]
-            } />
           </div>
-        </div>
       </div>
     );
   }

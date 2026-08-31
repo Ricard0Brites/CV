@@ -27,13 +27,15 @@ export default function ExperienceSection({ Title, Objects = [] })
                               </a>
                             </div>
                             <div className=" flex flex-[0.1] justify-end">
-                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-xs font-normal leading-3.7 overflow-x-hidden overflow-y-scroll">
+                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 w-50 text-sm font-normal leading-3.7 overflow-x-hidden overflow-y-scroll">
                               {value.Time}
                             </p>
                             </div>                            
                           </div>
                           <div className="flex flex-1">
-                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-sm font-normal leading-3.7 overflow-x-hidden overflow-y-scroll break-after-all" >{ value.Description }</p>
+                            <ul>
+                              <li className="bullet-li dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-xs font-normal leading-3.7 overflow-x-hidden overflow-y-scroll break-after-all">{ value.Description }</li>
+                            </ul>
                           </div>
                         </div>                        
                     )
@@ -72,7 +74,7 @@ export default function ExperienceSection({ Title, Objects = [] })
                               </a>
                             </div>
                             <div className=" flex flex-[0.1] justify-end">
-                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-xs font-normal leading-3.7 overflow-x-hidden overflow-y-scroll">
+                            <p className="dark:text-zinc-400 text-zinc-500 pl-8 pr-4 text-xs font-normal leading-3.7 w-40 overflow-x-hidden overflow-y-scroll">
                               {value.Time}
                             </p>
                             </div>                            
