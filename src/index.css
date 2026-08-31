@@ -45,6 +45,8 @@ hr {
 
 .print-only{
     display: none;
+    font-size: var(--text-sm); /* 0.75rem (12px) */ 
+    line-height: var(--text-sm--line-height); /* calc(1 / 0.75) */
   }
 
 .link{

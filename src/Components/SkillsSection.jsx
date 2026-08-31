@@ -106,31 +106,9 @@ export default class SkillsSection extends Component {
                 </div>
 
                 {/* Print-friendly version */}
-                <div
-                    key={"SkillPrint_" + Key}
-                    className="print:flex hidden flex-col items-start mb-2"
-                >
+                <div key={"SkillPrint_" + Key} className="hidden flex-1 flex-col print:flex mb-2 items-center">
                     {/* Name */}
-                    <span className="text-zinc-600 dark:text-zinc-200 font-medium text-sm mb-1">
-                        {DisplayText}
-                    </span>
-
-                    {/* Dots container */}
-                    {
-                        /*
-                        <div className="flex space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                            <div
-                                key={i}
-                                className={`h-2 w-2 rounded-full ${i < Rating
-                                        ? "bg-zinc-600 dark:bg-white"
-                                        : "bg-gray-300 dark:bg-zinc-600"
-                                    }`}
-                            />
-                        ))}
-                        </div>
-                        */
-                    }
+                    <span className="flex-1 text-zinc-600 text-sm dark:text-zinc-200 mb-0.5  ">{DisplayText}</span>
                 </div>
             </div>
         );
@@ -149,21 +127,37 @@ export default class SkillsSection extends Component {
 
         return (
             <div>
-
-                <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-                <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{this.props.Title}</h1>
-                <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
-                <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
-                    <div className='grid '
-                        style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
-                    >
-                        {
-                            this.#GetAllEntriesHTML()
-                        }
+                <div className='no-print'>
+                    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+                    <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{this.props.Title}</h1>
+                    <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
+                    <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
+                        <div className='grid '
+                            style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
+                        >
+                            {
+                                this.#GetAllEntriesHTML()
+                            }
+                        </div>
                     </div>
+                </div>
+
+                <div className='print-only'>
+                    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+                    <h1 className="font-bold dark:text-zinc-200 text-zinc-600">{this.props.Title}</h1>
+                    <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
+                    <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
+                        <div className='grid '
+                            style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
+                        >
+                            {
+                                this.#GetAllEntriesHTML()
+                            }
+                        </div>
 
                 </div>
+            </div>
+
             </div>
         );
     }
