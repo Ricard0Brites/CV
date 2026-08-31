@@ -213,7 +213,7 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2026 - Present", 
+                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2025 - Present", 
                   <ul>
                     <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
 
