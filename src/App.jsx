@@ -91,18 +91,6 @@ export default class App extends Component
 
   /**
    * 
-   * @param { object }Image - Image Object
-   * @param { string } Title -Title of the Project 
-   * @param { string } Description - Description of the project
-   * @param { string } Link - Link for the project (can be another page, can be a link to gihub, etc...)
-   * @returns { object }
-   */
-  #ProjectEntryObject(Image, Title, Description, Link) {
-    return { Image: [Image], Title: [Title], Description: [Description], Link: [Link] };
-  }
-
-  /**
-   * 
    * @param { string } CompanyName - Company Name eg: Riot Games
    * @param { string } Role - Role Name eg: Game Developer
    * @param { string } Location - Location eg: Remote, Portugal
