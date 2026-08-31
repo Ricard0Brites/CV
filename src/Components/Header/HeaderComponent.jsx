@@ -122,6 +122,14 @@ const PrinterIcon = <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox=
           {/* Right side */}
           <div className="flex items-center gap-4">
             <a
+              href="https://ricard0brites.github.io/Portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${Dark_PrimaryTextColor} dark:${Light_PrimaryTextColor}  hover:text-zinc-500 hover:dark:text-zinc-300 transition ease-in-out duration-300`}
+              >
+              Portfolio
+            </a>
+            <a
               href="https://github.com/Ricard0Brites"
               target="_blank"
               rel="noopener noreferrer"

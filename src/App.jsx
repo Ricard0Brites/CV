@@ -95,18 +95,6 @@ export default class App extends Component
 
   /**
    * 
-   * @param { object }Image - Image Object
-   * @param { string } Title -Title of the Project 
-   * @param { string } Description - Description of the project
-   * @param { string } Link - Link for the project (can be another page, can be a link to gihub, etc...)
-   * @returns { object }
-   */
-  #ProjectEntryObject(Image, Title, Description, Link) {
-    return { Image: [Image], Title: [Title], Description: [Description], Link: [Link] };
-  }
-
-  /**
-   * 
    * @param { string } CompanyName - Company Name eg: Riot Games
    * @param { string } Role - Role Name eg: Game Developer
    * @param { string } Location - Location eg: Remote, Portugal
@@ -257,56 +245,7 @@ export default class App extends Component
           </div>
 
             {this.#GetCommunication()}
-
-          <div className='break-inside-avoid'>
-            <ProjectSection Title="Projects" Objects=
-            {
-              [
-                this.#ProjectEntryObject(Decimated, "Decimated",
-                  `
-                  --- Professionally Worked on as Gameplay Engineer ---
-<pre> 
-  - Multiplayer
-  - Massive Open World
-  - AAA
-  - Shipped (01/2025)
-</pre>`,
-                  "https://store.epicgames.com/en-US/p/decimated-de8da4"),
-                this.#ProjectEntryObject(UnrealBehaviorTreeImage, "AI Demo In Unreal Engine",
-                  ` --- Personal Project ---
-                  <br></br> AI system in Unreal Engine using perception. The Project demonstrates 
-<pre> 
-  - AI Pathing
-  - State Driven behavior (Attack Enemy, Run To Cover)
-  - Enemy Detection (Vision, Sound, and Damage)
-  - Asynchronous Dynamic State Switching
-  - Interaction
-  - Weapon Mechanics 
-  - Animations
-  - Dynamic UI (Custom Shader)
-</pre>`,
-                "https://github.com/Ricard0Brites/Unreal_AI_Demo"),
-                this.#ProjectEntryObject(
-                  GameEngineCover,
-                  "C++ Game Engine",
-                  `
-                  --- University Project ---
-                  <br></br>
-                  Custom lightweight C++ Game Engine made using OpenGL.
-                  <br></br>Built systems: 
-<pre> 
-  - Entity management
-  - Collision
-  - Render
-  - Event
-  - Input
-</pre>
-                  `,
-                  "https://github.com/Ricard0Brites/Game-Engine/tree/main")
-              ]
-            } />
           </div>
-        </div>
       </div>
     );
   }
