@@ -20,21 +20,21 @@ import Decimated from '/src/assets/Decimated.png';
 const SkillsList = 
 [
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
-    //{slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
+    {slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
-    {slug: "Csharp", rating:4, DisplayText:"C#"},
-    // {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-     {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-     {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    //{slug: "Csharp", rating:4, DisplayText:"C#"},
+    //{slug: "Opengl", rating:2, DisplayText:"OpenGL"},
+    //{slug: "Javascript", rating:4, DisplayText:"Javascript"},
+    // {slug: "Typescript", rating:3, DisplayText:"Typescript"},
     // {slug: "Python", rating:3, DisplayText:"Python"},
     // {slug: "Dotnet", rating:4, DisplayText:".NET"},
     // {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
     // {slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
-    // {slug: "Figma", rating:3, DisplayText:"Figma"},
-    // {slug: "Git", rating:3, DisplayText:"Git"},
-     {slug: "Github", rating:3, DisplayText:"Github"},
+    {slug: "Figma", rating:3, DisplayText:"Figma"},
+    //{slug: "Git", rating:3, DisplayText:"Git"},
+    {slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
     // {slug: "Css", rating:3, DisplayText:"CSS"},
@@ -148,53 +148,10 @@ export default class App extends Component
               Name={''}
               PhotoObj={Photo}
               Description={<div className="flex flex-col gap-1 font-sans">
-        {/* Visa Badge: Adaptive for Light/Dark mode */}
-        <div>
-          <span className={`
-            inline-block
-            px-3
-            py-1
-            
-            rounded-md
-            text-sm
-            font-bold
-            tracking-wider
-            bg-green-600
-            text-white
-            dark:bg-green-500/20
-            dark:text-green-400 
-            dark:border
-            dark:border-green-500/30
-            no-print
-            `}
-          >
-            No sponsorship required
-          </span>
-
-          <span className={`
-            inline-block
-            px-2
-            py-[0.15]
-            rounded-md
-            text-sm
-            font-bold
-            bg-green-600
-            text-white
-            dark:bg-green-500/20
-            dark:text-green-400 
-            dark:border
-            dark:border-green-500/30
-            print-only
-            `}
-          >
-            No sponsorship required
-          </span>
-        </div>
             <ul>
               <li class="bullet-li"> Gameplay Engineer with experience building multiplayer gameplay and tools using C++ and Unreal Engine. </li>
               <li class="bullet-li"> Contributed and shipped a AAA title and supported live-ops. </li>
               <li class="bullet-li"> Background in gameplay systems (controls, abilities, UI), networking, and tools/pipeline development. </li>
-              <li class="bullet-li"> Collaborates across engineering, design, and art departments. </li>
               <li class="bullet-li"> Provides mentorship to peer developers. </li>
             </ul>
       </div>
@@ -215,7 +172,7 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2025 - Present", 
                   <ul>
-                    <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
+                    <li class="bullet-li">Developed tooling to create and dynamically integrate weapons in-engine and PlayFab simultaneously.</li>
 
                 </ul>),
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.steampowered.com/app/1354980/Decimated/", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
