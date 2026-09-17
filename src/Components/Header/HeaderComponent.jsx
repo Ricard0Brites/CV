@@ -6,7 +6,7 @@ export default function Header()
   /* Data */
     const Name = "Ricardo Brites";
     const Role = "Gameplay Programmer";
-    const Location = "Brampton Ontario, Canada & Leiria, Portugal";
+    const Location = "Brampton Ontario, Canada";
 
     /* Dark Coloring */
     const Dark_PrimarBGColor = 'bg-zinc-600';
