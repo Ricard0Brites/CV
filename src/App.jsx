@@ -19,35 +19,34 @@ import Decimated from '/src/assets/Decimated.png';
 
 const SkillsList = 
 [
-    {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
-    //{slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
-    {slug: "Cplusplus", rating:5, DisplayText:"C++"},
-    {slug: "Csharp", rating:4, DisplayText:"C#"},
-    {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    {slug: "Python", rating:3, DisplayText:"Python"},
-    {slug: "Dotnet", rating:4, DisplayText:".NET"},
-    {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
-    {slug: "Unity", rating:3, DisplayText:"Unity"},
-    {slug: "Jira", rating:4, DisplayText:"Jira"},
-    {slug: "Confluence", rating:4, DisplayText:"Confluence"},
-    {slug: "Figma", rating:3, DisplayText:"Figma"},
+  {slug: "React", rating:3, DisplayText:"React"},
+  {slug: "Github", rating:3, DisplayText:"Github"},
+  {slug: "Perforce", rating:5, DisplayText:"Perforce"},
+  {slug: "Jira", rating:4, DisplayText:"Jira"},
+  {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
+  {slug: "Javascript", rating:4, DisplayText:"Javascript"},
+  {slug: "Typescript", rating:3, DisplayText:"Typescript"},
+  {slug: "Python", rating:3, DisplayText:"Python"},
+  {slug: "Cplusplus", rating:5, DisplayText:"C++"},
+  {slug: "Csharp", rating:4, DisplayText:"C#"},
+  //{slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
+  //{slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
+  //{slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
+  //{slug: "Opengl", rating:2, DisplayText:"OpenGL"},
+  //{slug: "Dotnet", rating:4, DisplayText:".NET"},
+  //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
+  //{slug: "Unity", rating:3, DisplayText:"Unity"},
+    //{slug: "Confluence", rating:4, DisplayText:"Confluence"},
+    //{slug: "Figma", rating:3, DisplayText:"Figma"},
     // {slug: "Git", rating:3, DisplayText:"Git"},
-    {slug: "Github", rating:3, DisplayText:"Github"},
-    {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
     // {slug: "Css", rating:3, DisplayText:"CSS"},
     // {slug: "Tailwindcss", rating:3, DisplayText:"Tailwind"},
-    // {slug: "React", rating:3, DisplayText:"React"},
-    // {slug: "Nodedotjs", rating:3, DisplayText:"Node.JS"},
-    // {slug: "Django", rating:3, DisplayText:"Django"},
     // {slug: "Googledrive", rating:3},
     // {slug: "Googleauthenticator", rating:3},
     // {slug: "Notion", rating:4},
     // {slug: "Linux", rating:5, DisplayText:"Linux Terminal"},
     // {slug: "Windows11", rating:5, DisplayText:"Windows"},
-    {slug: "Visualstudio", rating:4, DisplayText:"Visual Studio"},
     // {slug: "Vscode", rating:3, DisplayText:"Visual Studio Code"},
     // {slug: "Pycharm", rating:3},
     // {slug: "Ssh", rating:4},
@@ -196,7 +195,12 @@ export default class App extends Component
 
                     <li class="bullet-li">Identified and fixed dependency issues maintaining clean module separation.</li>
 
-                </ul>)
+                </ul>),
+                this.#ExperienceEntryObject("ARXI", "", "Intern", "Leiria, Portugal", "03/2019 - 07/2019", 
+                  <ul>
+                    <li class="bullet-li">Developed an online store with Django in collaboration with another intern.</li>
+
+                </ul>),
               ]
             }/>
           </div>
