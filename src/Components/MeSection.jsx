@@ -36,7 +36,7 @@ export default function AboutMeSection({ Title, Name, PhotoObj, Description })
                 {Title}
             </h1>
             
-            <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
+            <hr className="w-[95%] sm:w-[100%] h-0.25 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
 
             <div className="flex flex-row">
 
