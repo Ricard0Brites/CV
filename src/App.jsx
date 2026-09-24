@@ -22,19 +22,19 @@ const SkillsList =
     {slug: "Unrealengine", rating:5, DisplayText:"Unreal Engine"},
     //{slug: "GameplayAbilitySystem", rating: 5, DisplayText:"Gameplay Ability System"},
     {slug: "Cplusplus", rating:5, DisplayText:"C++"},
-    {slug: "Csharp", rating:4, DisplayText:"C#"},
-    {slug: "Opengl", rating:2, DisplayText:"OpenGL"},
-    {slug: "Javascript", rating:4, DisplayText:"Javascript"},
-    {slug: "Typescript", rating:3, DisplayText:"Typescript"},
-    {slug: "Python", rating:3, DisplayText:"Python"},
-    {slug: "Dotnet", rating:4, DisplayText:".NET"},
-    {slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
-    {slug: "Unity", rating:3, DisplayText:"Unity"},
+    //{slug: "Csharp", rating:4, DisplayText:"C#"},
+    //{slug: "Opengl", rating:2, DisplayText:"OpenGL"},
+    //{slug: "Javascript", rating:4, DisplayText:"Javascript"},
+    //{slug: "Typescript", rating:3, DisplayText:"Typescript"},
+    //{slug: "Python", rating:3, DisplayText:"Python"},
+    //{slug: "Dotnet", rating:4, DisplayText:".NET"},
+    //{slug: "azuresqldatabase", rating:3, DisplayText:"SQL"},
+    //{slug: "Unity", rating:3, DisplayText:"Unity"},
     {slug: "Jira", rating:4, DisplayText:"Jira"},
     {slug: "Confluence", rating:4, DisplayText:"Confluence"},
     {slug: "Figma", rating:3, DisplayText:"Figma"},
     // {slug: "Git", rating:3, DisplayText:"Git"},
-    {slug: "Github", rating:3, DisplayText:"Github"},
+    //{slug: "Github", rating:3, DisplayText:"Github"},
     {slug: "Perforce", rating:5, DisplayText:"Perforce"},
     // {slug: "Html5", rating:3, DisplayText:"HTML"},
     // {slug: "Css", rating:3, DisplayText:"CSS"},
@@ -175,24 +175,24 @@ export default class App extends Component
               [ 
                 this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2025 - Present", 
                   <ul>
-                    <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab.</li>
+                    <li class="bullet-li">Developed tooling to create and dynamically integrate VR weapons into PlayFab and Unreal Engine.</li>
 
                 </ul>),
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.steampowered.com/app/1354980/Decimated/", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
-                    <li class="bullet-li">Refactored <strong>input controls</strong> consolidating in-place systems into a tailored scalable framework with rebind capabilities.</li>
-                    
                     <li class="bullet-li">Designed, implemented, optimized, and debugged <strong>core multiplayer survival systems</strong>, leveraging Unreal Engine replication and PlayFab.</li>
                     
                     <li class="bullet-li">Designed and implemented a custom <strong>sound-implementation pipeline with Gameplay Ability System (GAS).</strong>.</li>
                     
                     <li class="bullet-li">Reduced idle audio instances by <strong>~90%</strong> by designing and implementing a sound instance management system.</li>
+                    
+                    <li class="bullet-li">Suported QA and Live-Ops.</li>
 
+                    <li class="bullet-li">Refactored <strong>input controls</strong> consolidating in-place systems into a tailored scalable framework with rebind capabilities.</li>
+                    
                     <li class="bullet-li">Mentored peer developer.</li>
                     
                     <li class="bullet-li">Developed the majority <strong>( &gt;80% )</strong> of the User Interface present in the project.</li>
-                    
-                    <li class="bullet-li">Created <strong>server scripts</strong> optimizing QA and Live-Ops workflows.</li>
 
                     <li class="bullet-li">Identified and fixed dependency issues maintaining clean module separation.</li>
 
