@@ -152,45 +152,6 @@ export default class App extends Component
               Description={<div className="flex flex-col gap-1 font-sans">
         {/* Visa Badge: Adaptive for Light/Dark mode */}
         <div>
-          <span className={`
-            inline-block
-            px-3
-            py-1
-            
-            rounded-md
-            text-sm
-            font-bold
-            tracking-wider
-            bg-green-600
-            text-white
-            dark:bg-green-500/20
-            dark:text-green-400 
-            dark:border
-            dark:border-green-500/30
-            no-print
-            `}
-          >
-            No sponsorship required
-          </span>
-
-          <span className={`
-            inline-block
-            px-2
-            py-[0.15]
-            rounded-md
-            text-sm
-            font-bold
-            bg-green-600
-            text-white
-            dark:bg-green-500/20
-            dark:text-green-400 
-            dark:border
-            dark:border-green-500/30
-            print-only
-            `}
-          >
-            No sponsorship required
-          </span>
         </div>
             <ul>
               <li class="bullet-li"> Gameplay Engineer with experience building <strong>multiplayer gameplay, tools, and user interface </strong> using C++ and Unreal Engine. </li>
