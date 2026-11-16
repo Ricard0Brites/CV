@@ -185,7 +185,7 @@ export default class App extends Component
                 </ul>),
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.steampowered.com/app/1354980/Decimated/", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
                   <ul>
-                    <li class="bullet-li">Designed and implemented over 80% of the project's user interface, including core HUD features, dynamic UI, and menus.</li>
+                    <li class="bullet-li">Implemented over 80% of the project's user interface, including core HUD features, dynamic UI, and menus.</li>
                     <li class="bullet-li">Developed dynamic, parameter-driven Unreal Engine materials for runtime UI elements.</li>
                     <li class="bullet-li">Bridged gameplay systems and user interfaces, implementing the underlying logic and data flows required to support player-facing features.</li>
                     <li class="bullet-li">Designed, implemented, and debugged core networked multiplayer survival systems.</li>
