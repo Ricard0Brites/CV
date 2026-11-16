@@ -142,7 +142,7 @@ export default class SkillsSection extends Component {
                     </div>
                 </div>
 
-                <div className='print-only'>
+                <div className='print-only pt-4'>
                     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
                     <h1 className="font-bold dark:text-zinc-200 text-zinc-600">{this.props.Title}</h1>
                     <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
