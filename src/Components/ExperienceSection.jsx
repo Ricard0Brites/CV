@@ -6,7 +6,7 @@ export default function ExperienceSection({ Title, Objects = [] })
     <div>
       {/* Web Version */}
       <div className="no-print">
-        <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-4">{Title}</h1>
+        <h1 className="text-2xl dark:text-zinc-200 text-zinc-600 pt-2">{Title}</h1>
       <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
       {
         (() => {
@@ -16,8 +16,8 @@ export default function ExperienceSection({ Title, Objects = [] })
                 let content = Objects.map((value, index)  =>
                   {
                     return (
-                        <div key={`ExperienceSection_${index}`} className="flex flex-col flex-1  pr-5 pb-4">
-                          <div className=" flex flex-1">
+                        <div key={`ExperienceSection_${index}`} className="flex flex-col flex-1 pr-5">
+                          <div className="flex flex-1">
                             <div className=" flex flex-[0.9]">
                               <a href={value.Link.length > 0 ? value.Link : undefined} target="_blank" rel="noopener noreferrer" className={`${value.Link.length > 0 ? "link" : ""}`}>
                                 <div className="dark:text-zinc-200 text-zinc-600 text-sm leading-normal whitespace-normal">
@@ -53,8 +53,7 @@ export default function ExperienceSection({ Title, Objects = [] })
       </div>
       {/* Print Version */}
       <div className="print-only">
-        <h1 className="font-bold dark:text-zinc-200 text-zinc-600">{Title}</h1>
-      <hr className="w-[95%] sm:w-[100%] h-0.25 my-2 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
+        <h1 className="font-bold dark:text-zinc-200 text-zinc-600 pt-2">{Title}</h1>
       {
         (() => {
           //#region Image Object
@@ -63,7 +62,7 @@ export default function ExperienceSection({ Title, Objects = [] })
                 let content = Objects.map((value, index)  =>
                   {
                     return (
-                        <div key={`ExperienceSection_${index}`} className="flex flex-col flex-1 pr-5 pb-2">
+                        <div key={`ExperienceSection_${index}`} className="flex flex-col flex-1 pr-5">
                           <div className=" flex flex-1">
                             <div className=" flex flex-[0.9]">
                               <a href={value.Link.length > 0 ? value.Link : undefined} target="_blank" rel="noopener noreferrer" className={`${value.Link.length > 0 ? "link" : ""}`}>
