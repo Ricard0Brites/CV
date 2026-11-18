@@ -176,11 +176,12 @@ export default class App extends Component
             <ExperienceSection Title={"Experience"} Objects=
             {
               [ 
-                this.#ExperienceEntryObject("Independent", "", "Freelancing", "Remote", "10/2025 - Present", 
+                this.#ExperienceEntryObject("Gameplay Engineer", "", "Labirintine LTD", "Remote", "10/2025 - Present", 
                   <ul>
                     <li class="bullet-li">Developed automated Unreal Engine content pipelines to generate Blueprint and texture instances from base assets and mesh lists</li>
                     <li class="bullet-li">Integrated automated asset creation workflows with PlayFab content management, reducing manual production effort and improving communication across technical disciplines.</li>
                     <li class="bullet-li">Developed tooling to improve content configuration, increase supportability, and streamline asset management workflows in a production environment.</li>
+                    <li class="bullet-li">Represented Labirintine at DevGAMM alongside the development team, showcasing the project, engaging with industry professionals, communicating its features and vision, and strengthening skills in technical presentation, teamwork, networking, and cross-disciplinary communication.</li>
 
                 </ul>),
                 this.#ExperienceEntryObject("Fracture Labs", "https://store.steampowered.com/app/1354980/Decimated/", "Gameplay Engineer", "Remote", "07/2022 - 07/2025", 
