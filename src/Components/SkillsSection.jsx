@@ -123,6 +123,24 @@ export default class SkillsSection extends Component {
         }
         return content;
     }
+
+    #GetAllEntriesHTML_PrintVersion() {
+        let content = [];
+        let counter = 0;
+        for (let entry of this.#Skills) 
+        {
+            content.push(this.#MakeEntry(entry.slug, entry.rating, entry.DisplayText, counter++));
+        }
+
+        let res = "";
+        this.#Skills.forEach((skill)=>{
+            res += skill.DisplayText + ", "
+        });
+
+        res = res.slice(0, res.length - 2);
+
+        return res;
+    }
     render() {
 
         return (
@@ -144,18 +162,10 @@ export default class SkillsSection extends Component {
 
                 <div className='print-only pt-4'>
                     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-                    <h1 className="font-bold dark:text-zinc-200 text-zinc-600">{this.props.Title}</h1>
-                    <hr className="w-[95%] sm:w-[100%] h-0.25 my-4 bg-gray-300 dark:bg-zinc-600 border-0 rounded-full"></hr>
-                    <div className='flex flex-col pl-4 max-w-full flex-wrap justify-evenly pr-4'>
-                        <div className='grid '
-                            style={{ gridTemplateColumns: `repeat(${this.state.NumOfSkillsPerRow}, minmax(0, 1fr))` }}
-                        >
-                            {
-                                this.#GetAllEntriesHTML()
-                            }
-                        </div>
-
-                </div>
+                    <h1 className="font-bold  dark:text-zinc-200 text-zinc-600">{this.props.Title}</h1>
+                    <div className='dark:text-zinc-400 font-bold text-zinc-500 pl-8 pr-4 text-xs'>
+                        {this.#GetAllEntriesHTML_PrintVersion()}
+                    </div>
             </div>
 
             </div>
